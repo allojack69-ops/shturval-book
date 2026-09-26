@@ -16,9 +16,11 @@ nav{position:absolute;z-index:5;top:0;left:0;right:0;height:84px;display:flex;al
 .hero{min-height:790px;position:relative;overflow:hidden;display:flex;align-items:center;background:radial-gradient(circle at 72% 48%,#17242d 0,#091016 22%,#050608 55%)}
 .hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid #26333c;border-radius:50%;right:10%;top:145px;box-shadow:0 0 100px #1b303c55}
 .hero:after{content:"0";position:absolute;right:13%;top:130px;font-size:650px;line-height:1;font-weight:200;color:transparent;-webkit-text-stroke:1px #71879544;text-shadow:0 0 70px #8fa7ba22}
-.hero-content{position:relative;z-index:2;width:58%;padding-top:70px}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#89939c;margin-bottom:22px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px;width:100%;padding-top:75px}
+.hero-content{min-width:0}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#89939c;margin-bottom:22px}
 h1{font-size:clamp(52px,7.4vw,105px);line-height:.88;letter-spacing:-.055em;margin:0 0 25px;font-weight:800}h1 span{display:block;font-size:.42em;letter-spacing:.16em;font-weight:500;margin-top:22px;color:#cbd0d5}
 .lead{font-size:20px;line-height:1.55;color:#c1c8ce;max-width:650px;margin:0 0 35px}.lead b{color:#fff}
+.cover-wrap{display:flex;justify-content:center;align-items:center;position:relative}.cover-wrap:before{content:"";position:absolute;width:75%;height:75%;border-radius:50%;background:#8fa7ba18;filter:blur(55px)}.cover{position:relative;width:min(390px,82%);aspect-ratio:2/3;object-fit:cover;border-radius:2px;box-shadow:0 28px 80px #000,0 0 0 1px #ffffff14;transform:perspective(1200px) rotateY(-5deg);transition:transform .35s ease}.cover:hover{transform:perspective(1200px) rotateY(0deg) translateY(-4px)}
 .cta{display:inline-flex;align-items:center;gap:18px;background:var(--accent);padding:17px 25px;border-radius:2px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 10px 35px #d91f2633}.cta:after{content:"→";font-size:19px}.cta:hover{filter:brightness(1.12)}
 .meta{display:flex;gap:30px;margin-top:30px;color:#858e97;font-size:11px}.meta span:before{content:"";display:inline-block;width:5px;height:5px;border:1px solid #7f8b95;border-radius:50%;margin-right:9px;vertical-align:middle}
 .section{padding:110px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:1.15fr .85fr;gap:90px}.kicker{font-size:10px;letter-spacing:.25em;color:#89949d;text-transform:uppercase;margin-bottom:20px}.kicker:before{content:"";display:inline-block;width:34px;height:2px;background:var(--accent);vertical-align:middle;margin-right:12px}
@@ -29,20 +31,23 @@ h2{font-size:clamp(38px,5vw,70px);line-height:.98;letter-spacing:-.045em;margin:
 .author{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.author-box{border:1px solid var(--line);padding:35px}.author-name{font-size:30px;font-weight:700;margin-bottom:10px}
 .buy{padding:120px 0;text-align:center;background:radial-gradient(circle at center,#121a20 0,#050608 55%)}.buy h2{max-width:850px;margin:0 auto 35px}.buy p{max-width:650px;margin:0 auto 35px}
 footer{padding:30px 0;border-top:1px solid var(--line);color:#667079;font-size:11px}
-@media(max-width:800px){.links{display:none}.hero{min-height:720px}.hero-content{width:100%;padding-top:90px}.hero:after{right:-15%;top:230px;font-size:470px;opacity:.45}.hero:before{right:-20%;top:250px}.lead{font-size:17px}.grid,.author{grid-template-columns:1fr;gap:45px}.section{padding:75px 0}.meta{flex-wrap:wrap;gap:14px}}
+@media(max-width:800px){.links{display:none}.hero{min-height:auto;padding-bottom:70px}.hero-grid{grid-template-columns:1fr;gap:42px;padding-top:105px}.hero-content{width:100%}.hero:after{right:-18%;top:250px;font-size:470px;opacity:.35}.hero:before{right:-25%;top:270px}.lead{font-size:17px}.cover-wrap{order:2}.cover{width:min(330px,78vw);transform:none}.grid,.author{grid-template-columns:1fr;gap:45px}.section{padding:75px 0}.meta{flex-wrap:wrap;gap:14px}}
 </style>
 </head>
 <body>
 <nav class="wrap"><a class="logo" href="#">ШТУРВАЛ.<small>НАМ ПІДМІНИЛИ НУЛЬ</small></a><div class="links"><a href="#book">Про книгу</a><a href="#contour">Contour</a><a href="#excerpt">Фрагмент</a><a href="#author">Автор</a><a href="#buy">Купити</a></div></nav>
 
 <header class="hero">
-<div class="wrap"><div class="hero-content">
+<div class="wrap hero-grid">
+<div class="hero-content">
 <div class="eyebrow">Філософська наукова фантастика · Віталій Мігович</div>
 <h1>ШТУРВАЛ.<span>НАМ ПІДМІНИЛИ НУЛЬ</span></h1>
 <p class="lead">Система, створена, щоб <b>допомагати людині приймати рішення</b>, поступово починає визначати, якими взагалі можуть бути ці рішення.</p>
 <a class="cta" href="#buy">Придбати книгу</a>
 <div class="meta"><span>Електронна книга</span><span>Українською мовою</span><span>Філософська фантастика</span></div>
-</div></div>
+</div>
+<div class="cover-wrap"><img class="cover" src="cover.webp" alt="Обкладинка книги «ШТУРВАЛ. НАМ ПІДМІНИЛИ НУЛЬ»"></div>
+</div>
 </header>
 
 <section class="section" id="book"><div class="wrap grid">
