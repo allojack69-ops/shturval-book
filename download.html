@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ШТУРВАЛ — завантаження</title>
+<style>
+body{margin:0;min-height:100vh;background:#040608;color:#f4f5f6;font-family:Inter,system-ui,sans-serif;display:grid;place-items:center}
+main{width:min(620px,calc(100% - 44px));text-align:center;padding:40px 0}
+h1{font-size:clamp(34px,8vw,58px);letter-spacing:-.04em;margin:0 0 18px}
+p{color:#9aa4ad;line-height:1.7}
+a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color:#fff;text-decoration:none;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+#status{margin-top:22px}
+</style>
+</head>
+<body>
+<main>
+  <div>ШТУРВАЛ</div>
+  <h1>Дякую за покупку.</h1>
+  <p id="status">Перевіряємо оплату та готуємо EPUB…</p>
+  <a id="download" href="#" hidden>Завантажити EPUB</a>
+</main>
+<script>
+(async () => {
+  const status = document.getElementById("status");
+  const button = document.getElementById("download");
+  const transactionId = new URLSearchParams(location.search).get("transaction_id");
+
+  if (!transactionId) {
+    status.textContent = "Не знайдено номер транзакції.";
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      "/download-epub?transaction_id=" + encodeURIComponent(transactionId),
+      { cache: "no-store" }
+    );
+
+    if (!response.ok) {
+      throw new Error(await response.text());
+    }
+
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+
+    button.href = url;
+    button.download = "SHTURVAL_Ukrainian.epub";
+    button.hidden = false;
+    status.textContent = "Оплату підтверджено. EPUB готовий до завантаження.";
+
+    button.addEventListener("click", () => {
+      setTimeout(() => URL.revokeObjectURL(url), 60000);
+    });
+  } catch (error) {
+    console.error(error);
+    status.textContent = "Не вдалося підготувати файл. Спробуй оновити сторінку або звернися до автора.";
+  }
+})();
+</script>
+</body>
+</html>
