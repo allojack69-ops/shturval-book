@@ -9,7 +9,14 @@
 <script>
 Paddle.Environment.set("sandbox");
 Paddle.Initialize({
-  token: "test_62040a4bae783fb2737c7aa703f"
+  token: "test_62040a4bae783fb2737c7aa703f",
+  eventCallback: function(event) {
+    if (event.name === "checkout.completed" && event.data && event.data.transaction_id) {
+      window.location.href =
+        "/download.html?transaction_id=" +
+        encodeURIComponent(event.data.transaction_id);
+    }
+  }
 });
 function openShturvalCheckout(event){
   if(event) event.preventDefault();
