@@ -47,7 +47,11 @@ a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color
     button.href = url;
     button.download = "SHTURVAL_Ukrainian.epub";
     button.hidden = false;
-    status.textContent = "Оплату підтверджено. EPUB готовий до завантаження.";
+    status.textContent = "Оплату підтверджено. Завантаження EPUB розпочато.";
+
+    // Автоматично запускаємо завантаження. Сторінка при цьому залишається відкритою,
+    // а кнопка лишається доступною, якщо браузер заблокує автоматичний запуск.
+    button.click();
 
     button.addEventListener("click", () => {
       setTimeout(() => URL.revokeObjectURL(url), 60000);
