@@ -7,9 +7,8 @@
 <meta name="description" content="ШТУРВАЛ. НАМ ПІДМІНИЛИ НУЛЬ — філософська наукова фантастика Віталія Міговича про систему, яка поступово починає визначати, якими можуть бути рішення людини.">
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 <script>
-Paddle.Environment.set("sandbox");
 Paddle.Initialize({
-  token: "test_62040a4bae783fb2737c7aa703f",
+  token: "live_f8d6a4f7af01c7b89c33fcdc25a",
   eventCallback: function(event) {
     if (event.name === "checkout.completed" && event.data && event.data.transaction_id) {
       window.location.href =
@@ -22,7 +21,7 @@ function openShturvalCheckout(event){
   if(event) event.preventDefault();
   Paddle.Checkout.open({
     items: [
-      { priceId: "pri_01m46e7pfh0j9fhw85zvazb6pt", quantity: 1 }
+      { priceId: "pri_01m4aawaqc3cbxaa6byrcytnnt", quantity: 1 }
     ]
   });
   return false;

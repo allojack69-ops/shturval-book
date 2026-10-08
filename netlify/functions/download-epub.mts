@@ -6,8 +6,8 @@ declare const Netlify: {
   };
 };
 
-const PRICE_ID = "pri_01m46e7pfh0j9fhw85zvazb6pt";
-const PADDLE_API_URL = "https://sandbox-api.paddle.com";
+const PRICE_ID = "pri_01m4aawaqc3cbxaa6byrcytnnt";
+const PADDLE_API_URL = "https://api.paddle.com";
 
 export default async (req: Request) => {
   if (req.method !== "GET") {
