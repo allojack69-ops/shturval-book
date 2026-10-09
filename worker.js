@@ -30,6 +30,10 @@ async function handleDownload(request, env, url) {
   }
 
   if (!env.PADDLE_API_KEY || !env.BOOKS) {
+    console.error("EPUB delivery configuration missing", {
+      hasApiKey: Boolean(env.PADDLE_API_KEY),
+      hasBooksBinding: Boolean(env.BOOKS)
+    });
     return new Response("Book delivery is not configured. Please contact the author.", {
       status: 503,
       headers: { "Cache-Control": "no-store" }
@@ -47,7 +51,10 @@ async function handleDownload(request, env, url) {
         }
       }
     );
-  } catch {
+  } catch (error) {
+    console.error("Paddle request failed before receiving a response", {
+      errorName: error?.name || "UnknownError"
+    });
     return new Response("Could not verify payment with Paddle. Please try again later.", {
       status: 502,
       headers: { "Cache-Control": "no-store" }
@@ -55,6 +62,23 @@ async function handleDownload(request, env, url) {
   }
 
   if (!paddleResponse.ok) {
+    let errorCode = "unavailable";
+    let errorType = "unknown";
+    try {
+      const errorPayload = await paddleResponse.json();
+      const firstError = errorPayload?.error || errorPayload?.errors?.[0] || errorPayload?.data?.error;
+      if (typeof firstError?.code === "string") errorCode = firstError.code;
+      if (typeof firstError?.type === "string") errorType = firstError.type;
+    } catch {
+      // Do not log the response body; only safe status and parsed error identifiers.
+    }
+
+    console.error("Paddle transaction verification rejected", {
+      httpStatus: paddleResponse.status,
+      errorCode,
+      errorType
+    });
+
     return new Response("Transaction could not be verified", {
       status: 403,
       headers: { "Cache-Control": "no-store" }
@@ -65,6 +89,7 @@ async function handleDownload(request, env, url) {
   try {
     payload = await paddleResponse.json();
   } catch {
+    console.error("Paddle returned a successful status with invalid JSON");
     return new Response("Invalid response from payment provider", {
       status: 502,
       headers: { "Cache-Control": "no-store" }
@@ -73,6 +98,9 @@ async function handleDownload(request, env, url) {
 
   const transaction = payload?.data;
   if (!transaction || transaction.status !== "completed") {
+    console.error("Paddle transaction is not completed", {
+      status: transaction?.status || "missing"
+    });
     return new Response("Payment is not completed", {
       status: 403,
       headers: { "Cache-Control": "no-store" }
@@ -87,6 +115,9 @@ async function handleDownload(request, env, url) {
     transaction.items.some(item => item?.price?.id === expectedPriceId);
 
   if (!hasBookPrice) {
+    console.error("Completed Paddle transaction does not match requested edition", {
+      lang
+    });
     return new Response("Transaction does not contain this edition", {
       status: 403,
       headers: { "Cache-Control": "no-store" }
@@ -100,7 +131,11 @@ async function handleDownload(request, env, url) {
   let epub;
   try {
     epub = await env.BOOKS.get(objectKey);
-  } catch {
+  } catch (error) {
+    console.error("R2 EPUB read failed", {
+      errorName: error?.name || "UnknownError",
+      lang
+    });
     return new Response("Could not read the EPUB from storage. Please contact the author.", {
       status: 503,
       headers: { "Cache-Control": "no-store" }
@@ -108,6 +143,7 @@ async function handleDownload(request, env, url) {
   }
 
   if (!epub) {
+    console.error("Expected EPUB object missing from R2", { lang, objectKey });
     return new Response("The EPUB file is not present in the private BOOKS bucket.", {
       status: 503,
       headers: { "Cache-Control": "no-store" }
