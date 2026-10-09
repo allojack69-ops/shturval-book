@@ -54,7 +54,7 @@ export async function onRequestGet({ request, env }) {
     });
   }
 
-  const objectKey = lang === "en" ? "the-helm-english.epub" : "shturval-ukrainian.epub";
+  const objectKey = lang === "en" ? "THE_HELM_English_KDP_FINAL.epub" : "SHTURVAL_RELEASE_MASTER.epub";
   const epub = await env.BOOKS.get(objectKey);
 
   if (!epub) {
