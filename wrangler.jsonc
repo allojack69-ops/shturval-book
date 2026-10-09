@@ -1,13 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "shturval-book",
-  "main": "worker.js",
   "compatibility_date": "2026-10-09",
-  "assets": {
-    "directory": ".",
-    "binding": "ASSETS",
-    "run_worker_first": ["/download-epub*"]
-  },
+  "pages_build_output_dir": ".",
   "r2_buckets": [
     {
       "binding": "BOOKS",
@@ -15,6 +10,7 @@
     }
   ],
   "observability": {
+    "enabled": true,
     "logs": {
       "enabled": true,
       "invocation_logs": true,
