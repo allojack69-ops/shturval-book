@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ШТУРВАЛ — завантаження</title>
+<title>Book download</title>
 <style>
 body{margin:0;min-height:100vh;background:#040608;color:#f4f5f6;font-family:Inter,system-ui,sans-serif;display:grid;place-items:center}
 main{width:min(620px,calc(100% - 44px));text-align:center;padding:40px 0}
@@ -17,8 +17,8 @@ a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color
 </head>
 <body>
 <main>
-  <div>ШТУРВАЛ</div>
-  <h1>Дякую за покупку.</h1>
+  <div id="brand">ШТУРВАЛ</div>
+  <h1 id="heading">Дякую за покупку.</h1>
   <p id="status">Перевіряємо оплату та готуємо EPUB…</p>
   <div class="contour-message">
     <strong>CONTOUR</strong>
@@ -31,7 +31,17 @@ a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color
 (async () => {
   const status = document.getElementById("status");
   const button = document.getElementById("download");
-  const transactionId = new URLSearchParams(location.search).get("transaction_id");
+  const params = new URLSearchParams(location.search);
+  const transactionId = params.get("transaction_id");
+  const lang = params.get("lang") === "en" ? "en" : "uk";
+  if (lang === "en") {
+    document.documentElement.lang = "en";
+    document.title = "THE HELM — download";
+    document.getElementById("brand").textContent = "THE HELM";
+    document.getElementById("heading").textContent = "Thank you for your purchase.";
+    status.textContent = "Verifying your payment and preparing the EPUB…";
+    button.textContent = "Download EPUB";
+  }
 
   if (!transactionId) {
     status.textContent = "Не знайдено номер транзакції.";
@@ -40,7 +50,7 @@ a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color
 
   try {
     const response = await fetch(
-      "/download-epub?transaction_id=" + encodeURIComponent(transactionId),
+      "/download-epub?lang=" + lang + "&transaction_id=" + encodeURIComponent(transactionId),
       { cache: "no-store" }
     );
 
@@ -52,9 +62,9 @@ a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color
     const url = URL.createObjectURL(blob);
 
     button.href = url;
-    button.download = "SHTURVAL_Ukrainian.epub";
+    button.download = lang === "en" ? "THE_HELM_English.epub" : "SHTURVAL_Ukrainian.epub";
     button.hidden = false;
-    status.textContent = "Оплату підтверджено. Завантаження EPUB розпочато.";
+    status.textContent = lang === "en" ? "Payment confirmed. EPUB download started." : "Оплату підтверджено. Завантаження EPUB розпочато.";
 
     // Автоматично запускаємо завантаження. Сторінка при цьому залишається відкритою,
     // а кнопка лишається доступною, якщо браузер заблокує автоматичний запуск.
@@ -65,7 +75,7 @@ a{display:inline-flex;margin-top:20px;padding:15px 22px;background:#e32229;color
     });
   } catch (error) {
     console.error(error);
-    status.textContent = "Не вдалося підготувати файл. Спробуй оновити сторінку або звернися до автора.";
+    status.textContent = lang === "en" ? "Could not prepare the file. Refresh the page or contact the author." : "Не вдалося підготувати файл. Спробуй оновити сторінку або звернися до автора.";
   }
 })();
 </script>
