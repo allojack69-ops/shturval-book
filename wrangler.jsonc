@@ -8,13 +8,5 @@
       "binding": "BOOKS",
       "bucket_name": "shturval-books"
     }
-  ],
-  "observability": {
-    "enabled": true,
-    "logs": {
-      "enabled": true,
-      "invocation_logs": true,
-      "persist": true
-    }
-  }
+  ]
 }
