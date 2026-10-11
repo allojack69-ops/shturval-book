@@ -19,15 +19,11 @@ Paddle.Initialize({
 });
 function openShturvalCheckout(event){
   if(event) event.preventDefault();
-  const checkoutOptions = {
+  Paddle.Checkout.open({
     items: [
       { priceId: "pri_01m4aawaqc3cbxaa6byrcytnnt", quantity: 1 }
     ]
-  };
-  if (new URLSearchParams(window.location.search).get("test-discount-id") === "1") {
-    checkoutOptions.discountId = "dsc_01m4je8vf3ytf7aa0sznne6yd6";
-  }
-  Paddle.Checkout.open(checkoutOptions);
+  });
   return false;
 }
 </script>
