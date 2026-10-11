@@ -15,7 +15,11 @@ function openEnglishCheckout(event){
     alert("Direct English EPUB purchase is being connected.");
     return false;
   }
-  Paddle.Checkout.open({items:[{priceId:ENGLISH_PRICE_ID,quantity:1}]});
+  const checkoutOptions = {items:[{priceId:ENGLISH_PRICE_ID,quantity:1}]};
+  if (new URLSearchParams(window.location.search).get("test-discount-id") === "1") {
+    checkoutOptions.discountId = "dsc_01m4je8vf3ytf7aa0sznne6yd6";
+  }
+  Paddle.Checkout.open(checkoutOptions);
   return false;
 }
 </script>
