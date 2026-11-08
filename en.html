@@ -84,6 +84,15 @@ nav{height:86px;display:flex;align-items:center;justify-content:space-between}.l
   .buy-option{border-radius:13px;padding:20px 48px 20px 18px}
 }
 
+
+/* Desktop-only Contour layout: compact system panel, wide explanatory text panel */
+@media(min-width:801px){
+  .contour .wrap.grid{
+    grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr)!important;
+    column-gap:clamp(28px,5vw,72px);
+  }
+}
+
 </style>
 </head>
 <body>
