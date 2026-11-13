@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10191e"/><stop offset=".58" stop-color="#17252d"/><stop offset="1" stop-color="#080d11"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#28516b" stop-opacity=".55"/><stop offset="1" stop-color="#14232d" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#c8d5d9" stroke-opacity=".09" stroke-width="1"/></pattern>
+ <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4d88a7"/><stop offset=".55" stop-color="#173b50"/><stop offset="1" stop-color="#8aa8b4"/></linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect x="0" y="0" width="1200" height="630" fill="url(#grid)"/>
+<ellipse cx="920" cy="310" rx="390" ry="340" fill="url(#glow)"/>
+<g transform="translate(900 310) rotate(-17)">
+ <circle r="218" fill="none" stroke="url(#ring)" stroke-width="37" opacity=".9"/>
+ <circle r="174" fill="none" stroke="#6e9bb0" stroke-opacity=".42" stroke-width="1.5"/>
+ <ellipse rx="135" ry="194" fill="none" stroke="#6e9bb0" stroke-opacity=".45" stroke-width="1.4" transform="rotate(34)"/>
+ <ellipse rx="255" ry="160" fill="none" stroke="#6e9bb0" stroke-opacity=".25" stroke-width="1.2" transform="rotate(-32)"/>
+ <circle cx="-155" cy="-147" r="9" fill="#df5548"/>
+</g>
+<g fill="#f2f0e9">
+ <text x="82" y="93" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="5">VITALII MIHOVICH</text>
+ <rect x="82" y="133" width="42" height="3" fill="#df5548"/>
+ <text x="82" y="244" font-family="Arial,sans-serif" font-size="76" font-weight="700" letter-spacing="-3">Майбутнє</text>
+ <text x="82" y="332" font-family="Arial,sans-serif" font-size="76" font-weight="700" letter-spacing="-3">діє сьогодні.</text>
+ <text x="85" y="405" font-family="Arial,sans-serif" font-size="21" fill="#c3cdd0">Людина · Мислення · Системи</text>
+</g>
+<path d="M82 536H1118" stroke="#d5e0e3" stroke-opacity=".25"/>
+<text x="82" y="574" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#9eafb5">АВТОРСЬКИЙ ПРОСТІР</text>
+<text x="1118" y="574" text-anchor="end" font-family="Arial,sans-serif" font-size="13" letter-spacing="3" fill="#9eafb5">МАЙБУТНЄ ДІЄ СЬОГОДНІ</text>
+</svg>
