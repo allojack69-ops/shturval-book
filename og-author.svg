@@ -1,16 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
 <defs>
- <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#03090f" stop-opacity=".94"/><stop offset=".62" stop-color="#06111a" stop-opacity=".68"/><stop offset="1" stop-color="#06111a" stop-opacity=".08"/></linearGradient>
- <linearGradient id="bottom" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#02070c" stop-opacity="0"/><stop offset="1" stop-color="#02070c" stop-opacity=".7"/></linearGradient>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#03090f"/><stop offset=".55" stop-color="#0b1c29"/><stop offset="1" stop-color="#071018"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#1674a7" stop-opacity=".3"/><stop offset="1" stop-color="#0a1720" stop-opacity="0"/></radialGradient>
+ <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#74c9f5"/><stop offset=".45" stop-color="#147db5"/><stop offset="1" stop-color="#8edcff"/></linearGradient>
+ <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#02070c" stop-opacity=".85"/><stop offset=".62" stop-color="#02070c" stop-opacity=".38"/><stop offset="1" stop-color="#02070c" stop-opacity="0"/></linearGradient>
+ <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#9ebdca" stroke-opacity=".08"/></pattern>
 </defs>
-<image xlink:href="https://shturval-book.pages.dev/images/author-bg.jpg" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
-<rect width="1200" height="630" fill="#06111a" opacity=".18"/><rect width="1200" height="630" fill="url(#shade)"/><rect width="1200" height="630" fill="url(#bottom)"/>
-<path d="M82 123h48" stroke="#df5549" stroke-width="3"/>
-<text x="82" y="91" fill="#e8edef" font-family="Arial,sans-serif" font-size="17" letter-spacing="4" font-weight="700">VITALII MIHOVICH</text>
-<text x="82" y="260" fill="#f5f1e8" font-family="Georgia,serif" font-size="65" font-style="italic">Книга — це слід,</text>
-<text x="82" y="340" fill="#f5f1e8" font-family="Georgia,serif" font-size="65" font-style="italic">який лишила</text>
-<text x="82" y="420" fill="#f5f1e8" font-family="Georgia,serif" font-size="65" font-style="italic">філософія, коли йшла.</text>
-<path d="M82 493H1118" stroke="#dce5e9" stroke-opacity=".4"/>
-<text x="82" y="548" fill="#f5f1e8" font-family="Arial,sans-serif" font-size="31" letter-spacing="6">ВІТАЛІЙ МІГОВИЧ</text>
-<text x="82" y="588" fill="#a9c2d0" font-family="Arial,sans-serif" font-size="19" letter-spacing="6">МАЙБУТНЄ ДІЄ ЗАРАЗ</text>
+<rect width="1200" height="630" fill="url(#bg)"/><rect width="1200" height="630" fill="url(#grid)"/>
+<ellipse cx="910" cy="305" rx="420" ry="390" fill="url(#halo)"/>
+<g transform="translate(900 305)">
+ <circle r="220" fill="none" stroke="url(#ring)" stroke-width="25" opacity=".94"/>
+ <circle r="187" fill="none" stroke="#a4e3ff" stroke-opacity=".4" stroke-width="2"/>
+ <circle r="246" fill="none" stroke="#4b9dc5" stroke-opacity=".35" stroke-width="1.5"/>
+ <ellipse rx="148" ry="225" fill="none" stroke="#70b8d9" stroke-opacity=".3" stroke-width="1.5" transform="rotate(34)"/>
+ <ellipse rx="270" ry="166" fill="none" stroke="#70b8d9" stroke-opacity=".2" stroke-width="1.5" transform="rotate(-30)"/>
+ <path d="M-260 0H260M0-260V260" stroke="#6daac7" stroke-opacity=".12"/>
+ <circle cx="-158" cy="-150" r="8" fill="#df5549"/>
+</g>
+<path d="M0 0H1200V630H0Z" fill="url(#shade)"/>
+<g fill="#f3f1eb">
+ <text x="82" y="88" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">VITALII MIHOVICH</text>
+ <path d="M82 123h46" stroke="#df5549" stroke-width="3"/>
+ <text x="82" y="245" font-family="Georgia,serif" font-size="57" font-style="italic">Книга — це слід,</text>
+ <text x="82" y="318" font-family="Georgia,serif" font-size="57" font-style="italic">який лишила</text>
+ <text x="82" y="391" font-family="Georgia,serif" font-size="57" font-style="italic">філософія, коли йшла.</text>
+ <path d="M82 456H1118" stroke="#d5e0e3" stroke-opacity=".3"/>
+ <text x="82" y="520" font-family="Arial,sans-serif" font-size="29" font-weight="700" letter-spacing="3">ВІТАЛІЙ МІГОВИЧ</text>
+ <text x="82" y="566" font-family="Arial,sans-serif" font-size="19" letter-spacing="5" fill="#9dc8df">МАЙБУТНЄ ДІЄ ЗАРАЗ</text>
+</g>
 </svg>
