@@ -112,6 +112,18 @@ footer{padding:28px 0;color:#899287;font-size:11px;border-top:1px solid #ffffff1
     background-position:68% center;
   }
 }
+
+/* Frosted navigation strip: readable links over the hero photograph */
+nav{
+  background:rgba(5,12,8,.36);
+  -webkit-backdrop-filter:blur(14px) saturate(125%);
+  backdrop-filter:blur(14px) saturate(125%);
+  border-bottom:1px solid rgba(230,224,205,.14);
+  box-shadow:0 8px 28px rgba(0,0,0,.10);
+}
+@supports not ((backdrop-filter:blur(1px))){
+  nav{background:rgba(5,12,8,.76)}
+}
 </style>
 </head>
 <body>
