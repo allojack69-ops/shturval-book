@@ -71,6 +71,47 @@ footer{padding:28px 0;color:#899287;font-size:11px;border-top:1px solid #ffffff1
 
 .section#about .intro-grid>div:last-child,.gate-text{padding:23px 22px;border-radius:18px}
 .section#about{background-position:58% center;background-size:cover;background-image:linear-gradient(180deg,rgba(7,15,10,.76),rgba(7,15,10,.72)),url("https://d2jqrm6oza8nb6.cloudfront.net/datasets/09ce2ca6-7b50-48cd-ae5e-3cce2d78980e.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNzE4ZWE5MWUxYjk4MGFmOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTAxNDgxNH0.ca0PD6Nr1MTMhjE8jnxnHdq-B3D1h-pqDSyJCzYSWsM")}.section#about .intro-grid p{color:#e1e3d9}.wrap{width:calc(100% - 44px);max-width:600px}nav{height:68px}.navlinks{gap:13px;font-size:9px;letter-spacing:.09em}.navlinks a:nth-child(2){display:none}.hero{min-height:770px;align-items:flex-end;background-size:cover;background-position:64% center;background-repeat:no-repeat;background-color:#0a100d}.hero:before{background:linear-gradient(180deg,rgba(5,12,8,.08) 0%,rgba(5,12,8,.12) 36%,rgba(5,12,8,.76) 66%,#0a100d 100%)}.portal{display:none}.hero-content{padding:350px 0 66px;max-width:540px}.eyebrow{font-size:10px;letter-spacing:.25em;margin-bottom:22px}.hero h1{font-size:clamp(82px,20vw,116px);margin-bottom:28px}.hero h1 span{font-size:.43em;margin-top:18px}.hero-copy{font-size:18px;line-height:1.55;max-width:440px;margin-bottom:26px}.hero-note{font-size:12px;line-height:1.65;letter-spacing:.08em;max-width:520px}.cta{padding:17px 20px;font-size:11px}.intro-grid,.gate-grid,.book-grid{grid-template-columns:1fr;gap:30px}.gate-section{min-height:700px;background-position:58% center;background-size:cover;padding:92px 0}.gate-section:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,10,.35),rgba(8,15,10,.72));pointer-events:none}.section{padding:76px 0}.section h2{font-size:clamp(38px,10vw,48px);line-height:1.04;margin-bottom:24px}.intro-grid p,.gate-text p,.book-copy p{font-size:16px;line-height:1.8}.statement,.gate-quote{font-size:30px;line-height:1.3}.themes{grid-template-columns:1fr;margin-top:34px;gap:1px}.theme{min-height:auto;padding:24px 22px}.theme b{font-size:21px;margin-bottom:10px}.theme p{font-size:14px;line-height:1.7}.contents div{font-size:13px;padding:15px 0}.contents span{font-size:10px}.author-inner{align-items:flex-start;flex-direction:column}.author{padding:56px 0}.author h2{font-size:32px}.author p{font-size:15px}.author-link{margin-top:8px}footer{font-size:11px;line-height:1.7}footer .wrap{flex-direction:column;gap:8px}}@media(max-width:390px){.wrap{width:calc(100% - 36px)}.hero{background-position:64% center;background-size:cover;min-height:750px}.hero-content{padding-top:335px}.navlinks{gap:10px;font-size:8px}.hero h1{font-size:80px}.hero-copy{font-size:17px}}
+
+/* Final mobile/desktop contrast pass */
+#themes.section{
+  background-color:#09110c;
+  background-image:
+    linear-gradient(180deg,rgba(7,15,10,.48),rgba(7,15,10,.40)),
+    url("/images/sad-contours.webp");
+  background-size:cover;
+  background-position:center 54%;
+}
+#themes.section .themes{background:transparent;gap:0}
+#themes.section .theme{
+  background:rgba(5,13,8,.12);
+  border:0;
+  border-top:1px solid rgba(205,190,145,.34);
+  padding:30px 28px;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+}
+#themes.section .theme:last-child{border-bottom:1px solid rgba(205,190,145,.34)}
+.book-section{
+  background-color:#09110c;
+  background-image:
+    linear-gradient(90deg,rgba(7,15,10,.48),rgba(7,15,10,.38)),
+    url("/images/sad-contours.webp");
+  background-size:cover;
+  background-position:76% center;
+}
+.book-section .contents{border-top-color:rgba(205,190,145,.34)}
+.book-section .contents>div{border-bottom-color:rgba(205,190,145,.28)}
+@media(max-width:760px){
+  #themes.section{
+    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-contours.webp");
+    background-position:58% center;
+  }
+  #themes.section .theme{padding:24px 22px;background:rgba(5,13,8,.08)}
+  .book-section{
+    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-contours.webp");
+    background-position:68% center;
+  }
+}
 </style>
 </head>
 <body>
