@@ -130,10 +130,36 @@ nav{
   position:relative;
   padding:88px 0 96px;
   overflow:hidden;
+  isolation:isolate;
   border-top:1px solid rgba(255,255,255,.10);
   background:
-    linear-gradient(110deg,rgba(5,13,8,.76),rgba(8,18,12,.62)),
+    radial-gradient(ellipse at 78% 22%,rgba(190,163,103,.22),transparent 32%),
+    radial-gradient(ellipse at 14% 78%,rgba(71,111,68,.30),transparent 42%),
+    linear-gradient(110deg,rgba(5,13,8,.58),rgba(8,18,12,.44)),
     url("/images/sad-contours.webp") 68% center/cover no-repeat;
+}
+.buy-garden:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:-7%;
+  background:
+    radial-gradient(ellipse at 70% 30%,rgba(218,197,139,.18),transparent 24%),
+    radial-gradient(ellipse at 18% 52%,rgba(112,143,91,.20),transparent 30%),
+    radial-gradient(ellipse at 90% 88%,rgba(18,54,31,.42),transparent 34%);
+  filter:blur(26px);
+  pointer-events:none;
+}
+.buy-garden:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  opacity:.28;
+  background:
+    linear-gradient(125deg,transparent 0 36%,rgba(180,195,145,.10) 36.2%,transparent 37%),
+    linear-gradient(55deg,transparent 0 63%,rgba(180,195,145,.08) 63.2%,transparent 64%);
+  pointer-events:none;
 }
 .buy-garden .buy-panel{
   max-width:900px;
