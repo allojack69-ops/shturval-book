@@ -124,10 +124,82 @@ nav{
 @supports not ((backdrop-filter:blur(1px))){
   nav{background:rgba(5,12,8,.76)}
 }
+
+/* Garden book purchase panel */
+.buy-garden{
+  position:relative;
+  padding:88px 0 96px;
+  overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.10);
+  background:
+    linear-gradient(110deg,rgba(5,13,8,.76),rgba(8,18,12,.62)),
+    url("/images/sad-contours.webp") 68% center/cover no-repeat;
+}
+.buy-garden .buy-panel{
+  max-width:900px;
+  margin:auto;
+  padding:42px;
+  border:1px solid rgba(225,235,222,.26);
+  border-radius:20px;
+  background:rgba(13,25,17,.48);
+  -webkit-backdrop-filter:blur(16px) saturate(125%);
+  backdrop-filter:blur(16px) saturate(125%);
+  box-shadow:0 18px 55px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.10);
+  text-align:center;
+}
+.buy-garden h2{
+  max-width:720px;
+  margin:0 auto 18px;
+  font:500 clamp(36px,5vw,58px)/1.02 Manrope,sans-serif;
+  letter-spacing:-.05em;
+}
+.buy-garden .buy-lead{
+  max-width:590px;
+  margin:0 auto 32px;
+  color:#d0d6cb;
+  font-size:16px;
+  line-height:1.75;
+}
+.garden-buy-options{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  max-width:720px;
+  margin:0 auto;
+  text-align:left;
+}
+.garden-buy-option{
+  min-height:132px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:23px 24px;
+  border:1px solid rgba(225,235,222,.25);
+  border-radius:13px;
+  background:rgba(7,15,10,.28);
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.garden-buy-option.available:hover{
+  transform:translateY(-3px);
+  background:rgba(20,35,24,.55);
+  border-color:rgba(225,210,170,.58);
+}
+.garden-buy-option strong{font:600 16px Manrope,sans-serif;color:#f2f0e8}
+.garden-buy-option span{font-size:12px;line-height:1.6;color:#bdc5b9}
+.garden-buy-option b{align-self:flex-end;color:var(--gold);font-size:21px;font-weight:400}
+.garden-buy-option.pending{opacity:.72;border-style:dashed}
+.garden-buy-option.pending b{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:760px){
+ .buy-garden{padding:64px 0 70px;background-position:62% center}
+ .buy-garden .buy-panel{padding:29px 19px;border-radius:16px}
+ .buy-garden .buy-lead{font-size:15px;margin-bottom:24px}
+ .garden-buy-options{grid-template-columns:1fr;gap:10px}
+ .garden-buy-option{min-height:112px;padding:19px}
+}
 </style>
 </head>
 <body>
-<nav class="wrap"><a class="brand" href="sad.html">С<span>А</span>Д</a><div class="navlinks"><a href="#about">Про книгу</a><a href="#themes">Теми</a><a href="#author">Автор</a><a href="index.html">Штурвал</a></div></nav>
+<nav class="wrap"><a class="brand" href="sad.html">С<span>А</span>Д</a><div class="navlinks"><a href="#about">Про книгу</a><a href="#themes">Теми</a><a href="#author">Автор</a><a href="#buy">Купити</a><a href="index.html">Штурвал</a></div></nav>
 <header class="hero">
 <div class="forest"></div>
 <div class="portal" aria-hidden="true">
@@ -160,6 +232,28 @@ nav{
 <section class="section gate-section" id="garden"><div class="wrap gate-grid"><div><div class="kicker">За брамою</div><div class="gate-quote">Можливо, людині дали не готовий Рай.<br><span>Можливо, дали насінину.</span></div></div><div class="gate-text"><p>Вихід із Саду — не лише втрата. Це початок зустрічі з невідомим: вогнем, пам’яттю, мовою, законом, вірою, машинами й іншими людьми.</p><p>Крок за кроком людина вчиться не тільки пояснювати світ, а й відповідати за те, яким він стає. Бо майбутнє починається раніше, ніж з’являється той, кому воно належатиме.</p></div></div></section>
 <section class="section" id="themes"><div class="wrap"><div class="kicker">Коло питань</div><h2>Від першої межі — до спільного майбутнього.</h2><div class="themes"><article class="theme"><b>Пізнання</b><p>Як ми відрізняємо спостереження від пояснення — і коли починаємо плутати одне з іншим.</p></article><article class="theme"><b>Свобода</b><p>Що означає обирати, коли межі дозволеного формують наш світ.</p></article><article class="theme"><b>Відповідальність</b><p>Чому знання, сила й технології потребують внутрішньої межі.</p></article></div></div></section>
 <section class="section book-section"><div class="wrap book-grid"><div class="book-copy"><div class="kicker">Структура книги</div><h2>Тридцять п’ять розділів. Одна довга розмова.</h2><p>Від «Саду» й «Пізнання» — через «Ім’я», «Бога», «Совість», «Мову», «Машину» та «Любов» — до «Повернення» й «Епілогу».</p><p>Книга не закриває питання остаточною відповіддю. Вона залишає простір для наступного питання.</p></div><div class="contents"><div>Початок <span>I–V · САД — СЛІД</span></div><div>Людина і порядок <span>VI–XVII</span></div><div>Світ і його образи <span>XVIII–XXX</span></div><div>Я, ми і любов <span>XXXI–XXXIV</span></div><div>Повернення до питання <span>XXXV · ЕПІЛОГ</span></div></div></div></section>
+
+<section class="buy-garden" id="buy">
+  <div class="wrap">
+    <div class="buy-panel">
+      <div class="kicker">Електронна книга</div>
+      <h2>Зробити крок до Саду.</h2>
+      <p class="buy-lead">Обери зручний спосіб отримати книгу. Посилання на пряме завантаження додамо окремо.</p>
+      <div class="garden-buy-options">
+        <a class="garden-buy-option available" href="https://play.google.com/store/search?q=%D0%A1%D0%90%D0%94%20%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9%20%D0%9C%D1%96%D0%B3%D0%BE%D0%B2%D0%B8%D1%87&c=books" target="_blank" rel="noopener">
+          <strong>Google Play Книги</strong>
+          <span>Знайти електронне видання в Google Play</span>
+          <b>↗</b>
+        </a>
+        <div class="garden-buy-option pending" aria-disabled="true">
+          <strong>Пряме завантаження</strong>
+          <span>Завантаження EPUB або PDF безпосередньо з сайту</span>
+          <b>Посилання додамо</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="author" id="author"><div class="wrap author-inner"><div><div class="kicker">Автор</div><h2>Віталій Мігович</h2><p>Пише про людину, її мислення і світ, який вона сама навколо себе формує.</p></div><a class="author-link" href="author.html">Сторінка автора ↗</a></div></section>
 </main>
 <footer><div class="wrap"><span>© Віталій Мігович, 2026 · Усі права захищено.</span><span><a href="index.html">ШТУРВАЛ</a> · <a href="terms.html">Умови</a> · <a href="privacy.html">Конфіденційність</a></span></div></footer>
