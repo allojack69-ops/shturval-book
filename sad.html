@@ -21,18 +21,18 @@ nav{height:86px;position:absolute;z-index:5;top:0;left:0;right:0;display:flex;al
 .hero{min-height:790px;position:relative;overflow:hidden;display:flex;align-items:center;background:#09110c url("/images/sad-garden-gate.webp") 64% center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,6,.88) 0%,rgba(4,10,6,.56) 40%,rgba(4,10,6,.04) 100%),linear-gradient(0deg,rgba(4,10,6,.68),transparent 48%);z-index:1}
 .forest{display:none;position:absolute;inset:0;opacity:.78;background:radial-gradient(ellipse at 78% 52%,transparent 0 10%,#17251a55 31%,transparent 57%),repeating-linear-gradient(102deg,transparent 0 7%,#07100b28 7.2% 7.6%,transparent 8% 13%)}.portal{display:none}.portal svg{width:100%;height:100%}.hero-content{position:relative;z-index:2;padding:145px 0 100px;max-width:610px}.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 25px}.hero h1{font:500 clamp(76px,11vw,142px)/.82 Manrope,sans-serif;letter-spacing:-.075em;margin:0 0 34px}.hero h1 span{display:block;color:#d5c49e;font-weight:400;font-size:.48em;letter-spacing:.22em;margin:22px 0 0 8px}.hero-copy{max-width:480px;font-size:19px;line-height:1.7;color:#e0e1d7;margin:0 0 34px}.hero-note{font-size:11px;letter-spacing:.12em;color:#aeb6a8}.hero-note b{color:var(--gold);font-weight:600}
 .cta{display:inline-flex;align-items:center;gap:24px;margin-top:14px;padding:16px 21px;border:1px solid #c4a97888;color:#f1e9d8;font-size:11px;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.cta:after{content:"↓";font-size:17px;color:var(--gold)}.cta:hover{background:#c4a97818;border-color:var(--gold)}
-.section{padding:120px 0;border-top:1px solid #ffffff12;position:relative}.section#about{background:linear-gradient(90deg,rgba(7,15,10,.82),rgba(7,15,10,.62)),url("https://d2jqrm6oza8nb6.cloudfront.net/datasets/09ce2ca6-7b50-48cd-ae5e-3cce2d78980e.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNzE4ZWE5MWUxYjk4MGFmOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTAxNDgxNH0.ca0PD6Nr1MTMhjE8jnxnHdq-B3D1h-pqDSyJCzYSWsM") center 48%/cover no-repeat;isolation:isolate}.section#about .intro-grid{position:relative;z-index:1}.section#about .intro-grid p{color:#e1e3d9}
+.section{padding:120px 0;border-top:1px solid #ffffff12;position:relative}.section#about{background:linear-gradient(90deg,rgba(7,15,10,.82),rgba(7,15,10,.62)),url("/images/sad-garden-gate.webp") center 48%/cover no-repeat;isolation:isolate}.section#about .intro-grid{position:relative;z-index:1}.section#about .intro-grid p{color:#e1e3d9}
 /* Shared Garden visual language for themes and book structure */
 .section#themes{
   background:
     linear-gradient(180deg,rgba(7,15,10,.86),rgba(7,15,10,.78)),
-    url("/images/sad-contours.webp") center 54%/cover no-repeat;
+    url("/images/sad-garden-gate.webp") center 54%/cover no-repeat;
   background-color:#09110c;
 }
 .book-section{
   background:
     linear-gradient(90deg,rgba(7,15,10,.82),rgba(7,15,10,.72)),
-    url("/images/sad-contours.webp") 76% center/cover no-repeat;
+    url("/images/sad-garden-gate.webp") 76% center/cover no-repeat;
   background-color:#09110c;
 }
 .section#themes .theme{
@@ -44,89 +44,62 @@ nav{height:86px;position:absolute;z-index:5;top:0;left:0;right:0;display:flex;al
 .section#themes .theme p{color:#c0c5b9}
 .book-section .contents>div{border-color:rgba(205,190,145,.18)}
 
-/* Real stone tablet treatment: chipped silhouette, mineral layers and visible grain */
+/* Stone tablets: matte limestone, irregular cut edges and natural mineral grain */
 .section#about .intro-grid>div:last-child,
 .gate-text{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden;
+  position:relative;isolation:isolate;overflow:hidden;
   padding:28px 30px;
-  border:1px solid rgba(211,201,171,.62);
+  border:1px solid rgba(211,201,171,.48);
   border-radius:3px;
-  clip-path:polygon(1.2% 0,98.7% .5%,100% 2%,99.5% 98.5%,98.2% 100%,1% 99.4%,0 97.5%,.5% 2%);
+  clip-path:polygon(1.5% 0,98.5% .4%,100% 2.5%,99.5% 97%,97.8% 100%,1.8% 99.5%,0 97%,.5% 2%);
   background:
-    linear-gradient(112deg,rgba(235,225,195,.16),transparent 22% 72%,rgba(8,12,8,.30)),
-    radial-gradient(ellipse at 14% 18%,rgba(218,208,179,.34),transparent 32%),
-    radial-gradient(ellipse at 86% 82%,rgba(9,15,10,.45),transparent 43%),
-    repeating-linear-gradient(167deg,transparent 0 17px,rgba(12,17,12,.20) 18px,transparent 20px 38px),
-    repeating-linear-gradient(8deg,rgba(255,255,255,.055) 0 1px,transparent 1px 7px),
-    linear-gradient(135deg,#777768 0%,#626557 22%,#4d5549 54%,#3b453a 78%,#606253 100%);
-  box-shadow:0 20px 42px rgba(0,0,0,.48),inset 0 2px 3px rgba(255,255,255,.28),inset 0 -8px 15px rgba(0,0,0,.38);
+    radial-gradient(ellipse at 12% 12%,rgba(202,194,163,.26),transparent 30%),
+    radial-gradient(ellipse at 90% 84%,rgba(9,14,9,.44),transparent 36%),
+    linear-gradient(145deg,#686b5b 0%,#555b4d 28%,#444d40 62%,#5e6253 100%);
+  box-shadow:0 18px 36px rgba(0,0,0,.46),inset 0 1px 1px rgba(255,255,255,.24),inset 0 -9px 18px rgba(0,0,0,.32);
 }
 .section#about .intro-grid>div:last-child:before,
 .gate-text:before{
-  content:"";
-  position:absolute;
-  z-index:0;
-  inset:0;
-  opacity:.34;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.72'/%3E%3C/svg%3E");
-  background-size:180px 180px;
-  mix-blend-mode:soft-light;
-  pointer-events:none;
+  content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.48' numOctaves='4' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E");
+  background-size:240px 240px;mix-blend-mode:soft-light;
 }
 .section#about .intro-grid>div:last-child:after,
 .gate-text:after{
-  content:"";
-  position:absolute;
-  z-index:0;
-  inset:0;
-  opacity:.36;
+  content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.32;
   background:
-    linear-gradient(154deg,transparent 0 34%,rgba(22,27,20,.72) 34.15%,rgba(226,216,188,.20) 34.35%,transparent 34.7%),
-    linear-gradient(22deg,transparent 0 72%,rgba(22,27,20,.55) 72.12%,rgba(226,216,188,.16) 72.3%,transparent 72.6%),
-    radial-gradient(ellipse at 72% 24%,transparent 0 20%,rgba(12,17,12,.22) 21%,transparent 37%);
-  pointer-events:none;
+    linear-gradient(148deg,transparent 0 29%,rgba(17,21,15,.7) 29.15%,rgba(218,208,180,.28) 29.35%,transparent 29.65%),
+    linear-gradient(24deg,transparent 0 76%,rgba(17,21,15,.55) 76.12%,rgba(218,208,180,.22) 76.32%,transparent 76.6%),
+    radial-gradient(ellipse at 4% 4%,rgba(154,158,127,.45),transparent 14%),
+    radial-gradient(ellipse at 96% 96%,rgba(133,144,106,.35),transparent 17%);
 }
 .section#about .intro-grid>div:last-child p,
-.gate-text p{position:relative;z-index:1;color:#f5f1e6;text-shadow:0 1px 2px rgba(0,0,0,.55)}
-.section#about .intro-grid>div:last-child p+p,
-.gate-text p+p{margin-top:14px}
-
-/* Theme cards are cut from the same weathered stone */
+.gate-text p{position:relative;z-index:1;color:#f1eee2;text-shadow:0 1px 2px rgba(0,0,0,.62)}
+.section#about .intro-grid>div:last-child p+p,.gate-text p+p{margin-top:14px}
 .section#themes .theme{
-  position:relative;
-  overflow:hidden;
-  border:1px solid rgba(211,201,171,.48);
-  border-radius:2px;
-  background:
-    radial-gradient(ellipse at 16% 14%,rgba(218,208,179,.26),transparent 34%),
-    repeating-linear-gradient(168deg,transparent 0 18px,rgba(12,17,12,.18) 19px,transparent 21px 40px),
-    repeating-linear-gradient(7deg,rgba(255,255,255,.045) 0 1px,transparent 1px 7px),
-    linear-gradient(135deg,#66695d,#4d5549 55%,#394339);
-  box-shadow:inset 0 2px 2px rgba(255,255,255,.22),inset 0 -6px 12px rgba(0,0,0,.34),0 12px 28px rgba(0,0,0,.26);
-  -webkit-backdrop-filter:none;
-  backdrop-filter:none;
+  position:relative;overflow:hidden;border:1px solid rgba(211,201,171,.42);border-radius:2px;
+  background:linear-gradient(145deg,rgba(104,107,91,.86),rgba(57,66,54,.92));
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.18),inset 0 -7px 14px rgba(0,0,0,.3),0 12px 28px rgba(0,0,0,.24);
 }
 .section#themes .theme p{color:#ecece1}
 .kicker{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}.section h2{font:500 clamp(38px,6vw,76px)/.98 Manrope,sans-serif;letter-spacing:-.055em;margin:0 0 28px;max-width:820px}.intro-grid{display:grid;grid-template-columns:1fr .8fr;gap:100px;align-items:end}.intro-grid p{font-size:18px;line-height:1.8;color:var(--muted);margin:0}.statement{font:400 clamp(25px,3vw,39px)/1.35 Manrope,sans-serif;color:#e7e3d5;max-width:500px}.statement em{color:var(--gold);font-style:normal}
-.gate-section{background:linear-gradient(90deg,rgba(7,15,10,.82),rgba(10,20,13,.44)),url("https://d2jqrm6oza8nb6.cloudfront.net/datasets/5aea7361-1101-429a-a00d-014c86166eb6.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYTE1Mjg3MzFmMzhmZjk0YyIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NDkzMzkzN30.DW1gK0mm8PF6hfmnDLsMQwl6x4qH_d49ZxrVhkrWaKw") 58% center/cover no-repeat;overflow:hidden;scroll-margin-top:0;min-height:620px;display:flex;align-items:center}.gate-section:after{display:none}.gate-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center;position:relative;z-index:1}.gate-quote{font:400 clamp(28px,4vw,48px)/1.25 Manrope,sans-serif;color:#f0eee5}.gate-quote span{color:var(--gold)}.gate-text p,.book-copy p{color:var(--muted);font-size:16px;line-height:1.85}.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff20;margin-top:65px}.theme{background:#111a14;padding:30px 28px;min-height:190px}.theme b{display:block;font:500 22px Manrope,sans-serif;margin-bottom:15px;color:#e6dfcf}.theme p{font-size:13px;line-height:1.7;color:#aeb6a8;margin:0}
+.gate-section{background:linear-gradient(90deg,rgba(7,15,10,.82),rgba(10,20,13,.44)),url("/images/sad-garden-gate.webp") 58% center/cover no-repeat;overflow:hidden;scroll-margin-top:0;min-height:620px;display:flex;align-items:center}.gate-section:after{display:none}.gate-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center;position:relative;z-index:1}.gate-quote{font:400 clamp(28px,4vw,48px)/1.25 Manrope,sans-serif;color:#f0eee5}.gate-quote span{color:var(--gold)}.gate-text p,.book-copy p{color:var(--muted);font-size:16px;line-height:1.85}.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff20;margin-top:65px}.theme{background:#111a14;padding:30px 28px;min-height:190px}.theme b{display:block;font:500 22px Manrope,sans-serif;margin-bottom:15px;color:#e6dfcf}.theme p{font-size:13px;line-height:1.7;color:#aeb6a8;margin:0}
 .book-section{background:#0c130f}.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}.contents{border-top:1px solid var(--line);margin-top:8px}.contents div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid #ffffff16;color:#d8d9cf;font-size:13px;letter-spacing:.04em}.contents span{color:var(--gold);font-size:11px}
 .author{padding:70px 0 90px;background:#17231b}.author-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}.author h2{font:500 36px Manrope,sans-serif;margin:0 0 12px}.author p{max-width:590px;color:var(--muted);line-height:1.8;margin:0}.author-link{white-space:nowrap;border-bottom:1px solid var(--gold);padding:12px 0;color:#e6d7b8;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 footer{padding:28px 0;color:#899287;font-size:11px;border-top:1px solid #ffffff14}footer .wrap{display:flex;justify-content:space-between;gap:20px}
 @media(max-width:760px){
-.section#themes{background-position:58% center;background-image:linear-gradient(180deg,rgba(7,15,10,.88),rgba(7,15,10,.80)),url("/images/sad-contours.webp")}
-.book-section{background-position:68% center;background-image:linear-gradient(180deg,rgba(7,15,10,.88),rgba(7,15,10,.80)),url("/images/sad-contours.webp")}
+.section#themes{background-position:58% center;background-image:linear-gradient(180deg,rgba(7,15,10,.88),rgba(7,15,10,.80)),url("/images/sad-garden-gate.webp")}
+.book-section{background-position:68% center;background-image:linear-gradient(180deg,rgba(7,15,10,.88),rgba(7,15,10,.80)),url("/images/sad-garden-gate.webp")}
 
-.section#about .intro-grid>div:last-child,.gate-text{padding:23px 22px;border-radius:18px}
-.section#about{background-position:58% center;background-size:cover;background-image:linear-gradient(180deg,rgba(7,15,10,.76),rgba(7,15,10,.72)),url("https://d2jqrm6oza8nb6.cloudfront.net/datasets/09ce2ca6-7b50-48cd-ae5e-3cce2d78980e.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNzE4ZWE5MWUxYjk4MGFmOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTAxNDgxNH0.ca0PD6Nr1MTMhjE8jnxnHdq-B3D1h-pqDSyJCzYSWsM")}.section#about .intro-grid p{color:#e1e3d9}.wrap{width:calc(100% - 44px);max-width:600px}nav{height:68px}.navlinks{gap:13px;font-size:9px;letter-spacing:.09em}.navlinks a:nth-child(2){display:none}.hero{min-height:770px;align-items:flex-end;background-size:cover;background-position:64% center;background-repeat:no-repeat;background-color:#0a100d}.hero:before{background:linear-gradient(180deg,rgba(5,12,8,.08) 0%,rgba(5,12,8,.12) 36%,rgba(5,12,8,.76) 66%,#0a100d 100%)}.portal{display:none}.hero-content{padding:350px 0 66px;max-width:540px}.eyebrow{font-size:10px;letter-spacing:.25em;margin-bottom:22px}.hero h1{font-size:clamp(82px,20vw,116px);margin-bottom:28px}.hero h1 span{font-size:.43em;margin-top:18px}.hero-copy{font-size:18px;line-height:1.55;max-width:440px;margin-bottom:26px}.hero-note{font-size:12px;line-height:1.65;letter-spacing:.08em;max-width:520px}.cta{padding:17px 20px;font-size:11px}.intro-grid,.gate-grid,.book-grid{grid-template-columns:1fr;gap:30px}.gate-section{min-height:700px;background-position:58% center;background-size:cover;padding:92px 0}.gate-section:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,10,.35),rgba(8,15,10,.72));pointer-events:none}.section{padding:76px 0}.section h2{font-size:clamp(38px,10vw,48px);line-height:1.04;margin-bottom:24px}.intro-grid p,.gate-text p,.book-copy p{font-size:16px;line-height:1.8}.statement,.gate-quote{font-size:30px;line-height:1.3}.themes{grid-template-columns:1fr;margin-top:34px;gap:1px}.theme{min-height:auto;padding:24px 22px}.theme b{font-size:21px;margin-bottom:10px}.theme p{font-size:14px;line-height:1.7}.contents div{font-size:13px;padding:15px 0}.contents span{font-size:10px}.author-inner{align-items:flex-start;flex-direction:column}.author{padding:56px 0}.author h2{font-size:32px}.author p{font-size:15px}.author-link{margin-top:8px}footer{font-size:11px;line-height:1.7}footer .wrap{flex-direction:column;gap:8px}}@media(max-width:390px){.wrap{width:calc(100% - 36px)}.hero{background-position:64% center;background-size:cover;min-height:750px}.hero-content{padding-top:335px}.navlinks{gap:10px;font-size:8px}.hero h1{font-size:80px}.hero-copy{font-size:17px}}
+.section#about .intro-grid>div:last-child,.gate-text{padding:23px 22px;border-radius:3px;clip-path:polygon(1.5% 0,98.5% .4%,100% 2.5%,99.5% 97%,97.8% 100%,1.8% 99.5%,0 97%,.5% 2%)}
+.section#about{background-position:58% center;background-size:cover;background-image:linear-gradient(180deg,rgba(7,15,10,.76),rgba(7,15,10,.72)),url("/images/sad-garden-gate.webp")}.section#about .intro-grid p{color:#e1e3d9}.wrap{width:calc(100% - 44px);max-width:600px}nav{height:68px}.navlinks{gap:13px;font-size:9px;letter-spacing:.09em}.navlinks a:nth-child(2){display:none}.hero{min-height:770px;align-items:flex-end;background-size:cover;background-position:64% center;background-repeat:no-repeat;background-color:#0a100d}.hero:before{background:linear-gradient(180deg,rgba(5,12,8,.08) 0%,rgba(5,12,8,.12) 36%,rgba(5,12,8,.76) 66%,#0a100d 100%)}.portal{display:none}.hero-content{padding:350px 0 66px;max-width:540px}.eyebrow{font-size:10px;letter-spacing:.25em;margin-bottom:22px}.hero h1{font-size:clamp(82px,20vw,116px);margin-bottom:28px}.hero h1 span{font-size:.43em;margin-top:18px}.hero-copy{font-size:18px;line-height:1.55;max-width:440px;margin-bottom:26px}.hero-note{font-size:12px;line-height:1.65;letter-spacing:.08em;max-width:520px}.cta{padding:17px 20px;font-size:11px}.intro-grid,.gate-grid,.book-grid{grid-template-columns:1fr;gap:30px}.gate-section{min-height:700px;background-position:58% center;background-size:cover;padding:92px 0}.gate-section:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,10,.35),rgba(8,15,10,.72));pointer-events:none}.section{padding:76px 0}.section h2{font-size:clamp(38px,10vw,48px);line-height:1.04;margin-bottom:24px}.intro-grid p,.gate-text p,.book-copy p{font-size:16px;line-height:1.8}.statement,.gate-quote{font-size:30px;line-height:1.3}.themes{grid-template-columns:1fr;margin-top:34px;gap:1px}.theme{min-height:auto;padding:24px 22px}.theme b{font-size:21px;margin-bottom:10px}.theme p{font-size:14px;line-height:1.7}.contents div{font-size:13px;padding:15px 0}.contents span{font-size:10px}.author-inner{align-items:flex-start;flex-direction:column}.author{padding:56px 0}.author h2{font-size:32px}.author p{font-size:15px}.author-link{margin-top:8px}footer{font-size:11px;line-height:1.7}footer .wrap{flex-direction:column;gap:8px}}@media(max-width:390px){.wrap{width:calc(100% - 36px)}.hero{background-position:64% center;background-size:cover;min-height:750px}.hero-content{padding-top:335px}.navlinks{gap:10px;font-size:8px}.hero h1{font-size:80px}.hero-copy{font-size:17px}}
 
 /* Final mobile/desktop contrast pass */
 #themes.section{
   background-color:#09110c;
   background-image:
     linear-gradient(180deg,rgba(7,15,10,.48),rgba(7,15,10,.40)),
-    url("/images/sad-contours.webp");
+    url("/images/sad-garden-gate.webp");
   background-size:cover;
   background-position:center 54%;
 }
@@ -144,7 +117,7 @@ footer{padding:28px 0;color:#899287;font-size:11px;border-top:1px solid #ffffff1
   background-color:#09110c;
   background-image:
     linear-gradient(90deg,rgba(7,15,10,.48),rgba(7,15,10,.38)),
-    url("/images/sad-contours.webp");
+    url("/images/sad-garden-gate.webp");
   background-size:cover;
   background-position:76% center;
 }
@@ -152,12 +125,12 @@ footer{padding:28px 0;color:#899287;font-size:11px;border-top:1px solid #ffffff1
 .book-section .contents>div{border-bottom-color:rgba(205,190,145,.28)}
 @media(max-width:760px){
   #themes.section{
-    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-contours.webp");
+    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-garden-gate.webp");
     background-position:58% center;
   }
   #themes.section .theme{padding:24px 22px;background:rgba(5,13,8,.08)}
   .book-section{
-    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-contours.webp");
+    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-garden-gate.webp");
     background-position:68% center;
   }
 }
@@ -185,7 +158,7 @@ nav{
     radial-gradient(ellipse at 78% 22%,rgba(190,163,103,.22),transparent 32%),
     radial-gradient(ellipse at 14% 78%,rgba(71,111,68,.30),transparent 42%),
     linear-gradient(110deg,rgba(5,13,8,.58),rgba(8,18,12,.44)),
-    url("/images/sad-contours.webp") 68% center/cover no-repeat;
+    url("/images/sad-garden-gate.webp") 68% center/cover no-repeat;
 }
 .buy-garden:before{
   content:"";
