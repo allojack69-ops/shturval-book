@@ -3,306 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>САД — Віталій Мігович</title>
-<meta name="description" content="САД — філософська притча Віталія Міговича про пізнання, межі, свободу, любов і світ, який ми залишаємо тим, хто прийде після нас.">
+<title>САД — філософська притча Віталія Міговича</title>
+<meta name="description" content="«САД» — філософська притча Віталія Міговича про пізнання, свободу, межі, відповідальність, любов і світ, який ми залишаємо наступним поколінням.">
 <link rel="canonical" href="https://shturval-book.pages.dev/sad.html">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="САД">
+<meta name="theme-color" content="#101812">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Віталій Мігович">
 <meta property="og:title" content="САД — Віталій Мігович">
 <meta property="og:description" content="Перший Сад був даний. Другий треба було створити.">
-<meta name="theme-color" content="#101a15">
+<meta property="og:image" content="https://shturval-book.pages.dev/images/sad-garden-gate.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#101713;--deep:#0a100d;--panel:#18231c;--text:#f0eee5;--muted:#b4b9aa;--gold:#c4a978;--line:#3b493d;--green:#73866c}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 64px));margin:auto}
-nav{height:86px;position:absolute;z-index:5;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between}.brand{font:800 15px Manrope,sans-serif;letter-spacing:.3em}.brand span{color:var(--gold)}.navlinks{display:flex;gap:30px;color:#d0d3c9;font-size:11px;letter-spacing:.13em;text-transform:uppercase}.navlinks a:hover{color:var(--gold)}
-.hero{min-height:790px;position:relative;overflow:hidden;display:flex;align-items:center;background:#09110c url("/images/sad-garden-gate.webp") 64% center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,6,.88) 0%,rgba(4,10,6,.56) 40%,rgba(4,10,6,.04) 100%),linear-gradient(0deg,rgba(4,10,6,.68),transparent 48%);z-index:1}
-.forest{display:none;position:absolute;inset:0;opacity:.78;background:radial-gradient(ellipse at 78% 52%,transparent 0 10%,#17251a55 31%,transparent 57%),repeating-linear-gradient(102deg,transparent 0 7%,#07100b28 7.2% 7.6%,transparent 8% 13%)}.portal{display:none}.portal svg{width:100%;height:100%}.hero-content{position:relative;z-index:2;padding:145px 0 100px;max-width:610px}.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 25px}.hero h1{font:500 clamp(76px,11vw,142px)/.82 Manrope,sans-serif;letter-spacing:-.075em;margin:0 0 34px}.hero h1 span{display:block;color:#d5c49e;font-weight:400;font-size:.48em;letter-spacing:.22em;margin:22px 0 0 8px}.hero-copy{max-width:480px;font-size:19px;line-height:1.7;color:#e0e1d7;margin:0 0 34px}.hero-note{font-size:11px;letter-spacing:.12em;color:#aeb6a8}.hero-note b{color:var(--gold);font-weight:600}
-.cta{display:inline-flex;align-items:center;gap:24px;margin-top:14px;padding:16px 21px;border:1px solid #c4a97888;color:#f1e9d8;font-size:11px;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.cta:after{content:"↓";font-size:17px;color:var(--gold)}.cta:hover{background:#c4a97818;border-color:var(--gold)}
-.section{padding:120px 0;border-top:1px solid #ffffff12;position:relative}.section#about{background:linear-gradient(90deg,rgba(7,15,10,.82),rgba(7,15,10,.62)),url("/images/sad-garden-gate.webp") center 48%/cover no-repeat;isolation:isolate}.section#about .intro-grid{position:relative;z-index:1}.section#about .intro-grid p{color:#e1e3d9}
-/* Shared Garden visual language for themes and book structure */
-.section#themes{
-  background:
-    linear-gradient(180deg,rgba(7,15,10,.86),rgba(7,15,10,.78)),
-    url("/images/sad-garden-gate.webp") center 54%/cover no-repeat;
-  background-color:#09110c;
-}
-.book-section{
-  background:
-    linear-gradient(90deg,rgba(7,15,10,.82),rgba(7,15,10,.72)),
-    url("/images/sad-garden-gate.webp") 76% center/cover no-repeat;
-  background-color:#09110c;
-}
-.section#themes .theme{
-  background:rgba(7,16,11,.28);
-  border-color:rgba(205,190,145,.18);
-  -webkit-backdrop-filter:blur(5px);
-  backdrop-filter:blur(5px);
-}
-.section#themes .theme p{color:#c0c5b9}
-.book-section .contents>div{border-color:rgba(205,190,145,.18)}
-
-/* Stone tablets: matte limestone, irregular cut edges and natural mineral grain */
-.section#about .intro-grid>div:last-child,
-.gate-text{
-  position:relative;isolation:isolate;overflow:hidden;
-  padding:28px 30px;
-  border:1px solid rgba(211,201,171,.48);
-  border-radius:3px;
-  clip-path:polygon(1.5% 0,98.5% .4%,100% 2.5%,99.5% 97%,97.8% 100%,1.8% 99.5%,0 97%,.5% 2%);
-  background:
-    radial-gradient(ellipse at 12% 12%,rgba(202,194,163,.26),transparent 30%),
-    radial-gradient(ellipse at 90% 84%,rgba(9,14,9,.44),transparent 36%),
-    linear-gradient(145deg,#686b5b 0%,#555b4d 28%,#444d40 62%,#5e6253 100%);
-  box-shadow:0 18px 36px rgba(0,0,0,.46),inset 0 1px 1px rgba(255,255,255,.24),inset 0 -9px 18px rgba(0,0,0,.32);
-}
-.section#about .intro-grid>div:last-child:before,
-.gate-text:before{
-  content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.48' numOctaves='4' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E");
-  background-size:240px 240px;mix-blend-mode:soft-light;
-}
-.section#about .intro-grid>div:last-child:after,
-.gate-text:after{
-  content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.32;
-  background:
-    linear-gradient(148deg,transparent 0 29%,rgba(17,21,15,.7) 29.15%,rgba(218,208,180,.28) 29.35%,transparent 29.65%),
-    linear-gradient(24deg,transparent 0 76%,rgba(17,21,15,.55) 76.12%,rgba(218,208,180,.22) 76.32%,transparent 76.6%),
-    radial-gradient(ellipse at 4% 4%,rgba(154,158,127,.45),transparent 14%),
-    radial-gradient(ellipse at 96% 96%,rgba(133,144,106,.35),transparent 17%);
-}
-.section#about .intro-grid>div:last-child p,
-.gate-text p{position:relative;z-index:1;color:#f1eee2;text-shadow:0 1px 2px rgba(0,0,0,.62)}
-.section#about .intro-grid>div:last-child p+p,.gate-text p+p{margin-top:14px}
-.section#themes .theme{
-  position:relative;overflow:hidden;border:1px solid rgba(211,201,171,.42);border-radius:2px;
-  background:linear-gradient(145deg,rgba(104,107,91,.86),rgba(57,66,54,.92));
-  box-shadow:inset 0 1px 1px rgba(255,255,255,.18),inset 0 -7px 14px rgba(0,0,0,.3),0 12px 28px rgba(0,0,0,.24);
-}
-.section#themes .theme p{color:#ecece1}
-.kicker{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}.section h2{font:500 clamp(38px,6vw,76px)/.98 Manrope,sans-serif;letter-spacing:-.055em;margin:0 0 28px;max-width:820px}.intro-grid{display:grid;grid-template-columns:1fr .8fr;gap:100px;align-items:end}.intro-grid p{font-size:18px;line-height:1.8;color:var(--muted);margin:0}.statement{font:400 clamp(25px,3vw,39px)/1.35 Manrope,sans-serif;color:#e7e3d5;max-width:500px}.statement em{color:var(--gold);font-style:normal}
-.gate-section{background:linear-gradient(90deg,rgba(7,15,10,.82),rgba(10,20,13,.44)),url("/images/sad-garden-gate.webp") 58% center/cover no-repeat;overflow:hidden;scroll-margin-top:0;min-height:620px;display:flex;align-items:center}.gate-section:after{display:none}.gate-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:center;position:relative;z-index:1}.gate-quote{font:400 clamp(28px,4vw,48px)/1.25 Manrope,sans-serif;color:#f0eee5}.gate-quote span{color:var(--gold)}.gate-text p,.book-copy p{color:var(--muted);font-size:16px;line-height:1.85}.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ffffff20;margin-top:65px}.theme{background:#111a14;padding:30px 28px;min-height:190px}.theme b{display:block;font:500 22px Manrope,sans-serif;margin-bottom:15px;color:#e6dfcf}.theme p{font-size:13px;line-height:1.7;color:#aeb6a8;margin:0}
-.book-section{background:#0c130f}.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}.contents{border-top:1px solid var(--line);margin-top:8px}.contents div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid #ffffff16;color:#d8d9cf;font-size:13px;letter-spacing:.04em}.contents span{color:var(--gold);font-size:11px}
-.author{padding:70px 0 90px;background:#17231b}.author-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}.author h2{font:500 36px Manrope,sans-serif;margin:0 0 12px}.author p{max-width:590px;color:var(--muted);line-height:1.8;margin:0}.author-link{white-space:nowrap;border-bottom:1px solid var(--gold);padding:12px 0;color:#e6d7b8;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-footer{padding:28px 0;color:#899287;font-size:11px;border-top:1px solid #ffffff14}footer .wrap{display:flex;justify-content:space-between;gap:20px}
+:root{--night:#0b120e;--forest:#111c15;--forest2:#19251c;--paper:#e9e6d9;--muted:#b8bdad;--gold:#c9ae7c;--line:rgba(226,218,190,.18);--serif:Georgia,'Times New Roman',serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--night);color:var(--paper);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,calc(100% - 64px));margin:0 auto}
+nav{height:82px;position:absolute;inset:0 0 auto;z-index:10;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.12)}
+.brand{font:800 13px Manrope,sans-serif;letter-spacing:.2em;color:#f2efe5}
+.navlinks{display:flex;align-items:center;gap:30px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#e0e1d5}
+.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--gold)}
+.navlinks .nav-buy{border:1px solid rgba(201,174,124,.65);padding:12px 17px;color:#ead9b5}
+.hero{min-height:790px;position:relative;display:flex;align-items:center;overflow:hidden;background:#0a110c url('/images/sad-garden-gate.webp') 64% center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,11,7,.94) 0%,rgba(5,11,7,.78) 34%,rgba(5,11,7,.22) 72%,rgba(5,11,7,.06) 100%),linear-gradient(0deg,rgba(5,11,7,.72),transparent 40%)}
+.hero-content{position:relative;z-index:1;padding:140px 0 105px;max-width:700px}
+.eyebrow,.kicker{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.eyebrow{margin:0 0 32px}
+h1{font:500 clamp(100px,17vw,196px)/.76 Manrope,sans-serif;letter-spacing:-.095em;margin:0 0 36px;color:#f0eee5}
+h1 span{display:block;margin:28px 0 0 9px;font:400 clamp(17px,2.4vw,26px)/1.3 'DM Sans',sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#d6c49d}
+.hero-line{max-width:570px;font:400 clamp(25px,3.2vw,39px)/1.3 var(--serif);color:#f1eee3;margin:0 0 22px}
+.hero-copy{max-width:480px;color:#d0d3c8;font-size:15px;line-height:1.8;margin:0 0 34px}
+.actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:25px;padding:16px 20px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;transition:.25s}
+.btn-primary{background:#c4a978;color:#11180f;border:1px solid #c4a978}.btn-primary:hover{background:#dfc99d}
+.btn-ghost{border:1px solid rgba(235,229,210,.42);color:#f0eee5}.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.scroll-note{position:absolute;bottom:35px;left:50%;transform:translateX(-50%);z-index:2;color:#c1c4b7;font-size:9px;letter-spacing:.25em;text-transform:uppercase;white-space:nowrap}
+.scroll-note:after{content:"";display:block;width:1px;height:35px;background:var(--gold);margin:13px auto 0}
+.section{padding:125px 0;border-top:1px solid rgba(255,255,255,.08)}
+.intro{background:linear-gradient(120deg,#111b14,#0d1510)}
+.intro-grid{display:grid;grid-template-columns:1fr .8fr;gap:110px;align-items:end}
+.kicker{margin:0 0 23px}
+h2{font:500 clamp(38px,5.4vw,68px)/1.02 Manrope,sans-serif;letter-spacing:-.065em;margin:0 0 28px;max-width:780px}
+.intro-lead{font:400 clamp(24px,2.8vw,35px)/1.38 var(--serif);color:#e8e3d4;margin:0}
+.intro-copy{font-size:16px;line-height:1.9;color:var(--muted);margin:0}
+.intro-copy strong{color:#e8e5d9;font-weight:500}
+.gate{position:relative;min-height:670px;display:flex;align-items:center;background:url('/images/sad-garden-gate.webp') 57% center/cover no-repeat}
+.gate:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,8,.9),rgba(5,12,8,.62) 42%,rgba(5,12,8,.08)),linear-gradient(0deg,rgba(5,12,8,.35),transparent)}
+.gate .wrap{position:relative;z-index:1}
+.gate-quote{max-width:680px;font:400 clamp(36px,5.5vw,70px)/1.16 var(--serif);color:#f2efe5;margin:0}
+.gate-quote em{font-style:normal;color:#d3b77f}
+.gate-caption{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#d0d1c5;margin-top:30px}
+.themes{background:#0d1510}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:50px}
+.section-head p{max-width:360px;color:var(--muted);font-size:15px;line-height:1.8;margin:0 0 30px}
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:55px;background:var(--line);border:1px solid var(--line)}
+.theme{min-height:225px;padding:31px 29px;background:linear-gradient(145deg,#202b20,#141e17)}
+.theme-num{font:400 12px var(--serif);color:var(--gold);margin-bottom:28px}
+.theme h3{font:500 23px Manrope,sans-serif;margin:0 0 12px;color:#eee9da}
+.theme p{font-size:13px;line-height:1.75;color:#bdc2b4;margin:0}
+.structure{background:linear-gradient(135deg,#18251b,#0e1711)}
+.structure-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:100px;align-items:start}
+.structure-intro{position:sticky;top:110px}
+.structure-intro p{max-width:390px;color:var(--muted);font-size:15px;line-height:1.85}
+.chapters{border-top:1px solid var(--line)}
+.chapter{display:flex;justify-content:space-between;gap:25px;padding:22px 0;border-bottom:1px solid var(--line);font-size:14px;color:#e8e5d9}
+.chapter span{color:var(--gold);font-size:11px;letter-spacing:.08em;white-space:nowrap}
+.note{margin-top:28px;padding:22px 24px;border-left:2px solid var(--gold);background:rgba(0,0,0,.16);color:#c5c8bb;font-size:13px;line-height:1.8}
+.closing{padding:130px 0;background:#0a110d;text-align:center}
+.closing .kicker{margin-bottom:25px}
+.closing h2{max-width:850px;margin:0 auto 28px}
+.closing p{max-width:620px;margin:0 auto 36px;color:var(--muted);font:400 22px/1.5 var(--serif)}
+.buy{padding:100px 0;background:linear-gradient(110deg,rgba(7,14,9,.92),rgba(8,16,10,.82)),url('/images/sad-garden-gate.webp') center 58%/cover no-repeat;border-top:1px solid var(--line)}
+.buy-panel{max-width:760px;margin:0 auto;text-align:center}
+.buy-panel h2{margin:0 auto 20px}
+.buy-panel p{max-width:600px;margin:0 auto 30px;color:var(--muted);font-size:14px;line-height:1.8}
+.buy-note{margin-top:18px!important;font-size:11px!important;color:#9fa797!important}
+.author{padding:68px 0;background:#17231a}
+.author-inner{display:flex;justify-content:space-between;align-items:center;gap:40px}
+.author h2{font-size:32px;margin:0 0 12px}
+.author p{max-width:570px;color:#c1c7b9;font-size:14px;line-height:1.8;margin:0}
+.author-link{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#e4d1a7;border-bottom:1px solid var(--gold);padding:12px 0;white-space:nowrap}
+footer{padding:25px 0;color:#929b8e;font-size:10px;letter-spacing:.04em;border-top:1px solid rgba(255,255,255,.1)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px}
+footer a:hover{color:var(--gold)}
 @media(max-width:760px){
-.section#themes{background-position:58% center;background-image:linear-gradient(180deg,rgba(7,15,10,.88),rgba(7,15,10,.80)),url("/images/sad-garden-gate.webp")}
-.book-section{background-position:68% center;background-image:linear-gradient(180deg,rgba(7,15,10,.88),rgba(7,15,10,.80)),url("/images/sad-garden-gate.webp")}
-
-.section#about .intro-grid>div:last-child,.gate-text{padding:23px 22px;border-radius:3px;clip-path:polygon(1.5% 0,98.5% .4%,100% 2.5%,99.5% 97%,97.8% 100%,1.8% 99.5%,0 97%,.5% 2%)}
-.section#about{background-position:58% center;background-size:cover;background-image:linear-gradient(180deg,rgba(7,15,10,.76),rgba(7,15,10,.72)),url("/images/sad-garden-gate.webp")}.section#about .intro-grid p{color:#e1e3d9}.wrap{width:calc(100% - 44px);max-width:600px}nav{height:68px}.navlinks{gap:13px;font-size:9px;letter-spacing:.09em}.navlinks a:nth-child(2){display:none}.hero{min-height:770px;align-items:flex-end;background-size:cover;background-position:64% center;background-repeat:no-repeat;background-color:#0a100d}.hero:before{background:linear-gradient(180deg,rgba(5,12,8,.08) 0%,rgba(5,12,8,.12) 36%,rgba(5,12,8,.76) 66%,#0a100d 100%)}.portal{display:none}.hero-content{padding:350px 0 66px;max-width:540px}.eyebrow{font-size:10px;letter-spacing:.25em;margin-bottom:22px}.hero h1{font-size:clamp(82px,20vw,116px);margin-bottom:28px}.hero h1 span{font-size:.43em;margin-top:18px}.hero-copy{font-size:18px;line-height:1.55;max-width:440px;margin-bottom:26px}.hero-note{font-size:12px;line-height:1.65;letter-spacing:.08em;max-width:520px}.cta{padding:17px 20px;font-size:11px}.intro-grid,.gate-grid,.book-grid{grid-template-columns:1fr;gap:30px}.gate-section{min-height:700px;background-position:58% center;background-size:cover;padding:92px 0}.gate-section:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,10,.35),rgba(8,15,10,.72));pointer-events:none}.section{padding:76px 0}.section h2{font-size:clamp(38px,10vw,48px);line-height:1.04;margin-bottom:24px}.intro-grid p,.gate-text p,.book-copy p{font-size:16px;line-height:1.8}.statement,.gate-quote{font-size:30px;line-height:1.3}.themes{grid-template-columns:1fr;margin-top:34px;gap:1px}.theme{min-height:auto;padding:24px 22px}.theme b{font-size:21px;margin-bottom:10px}.theme p{font-size:14px;line-height:1.7}.contents div{font-size:13px;padding:15px 0}.contents span{font-size:10px}.author-inner{align-items:flex-start;flex-direction:column}.author{padding:56px 0}.author h2{font-size:32px}.author p{font-size:15px}.author-link{margin-top:8px}footer{font-size:11px;line-height:1.7}footer .wrap{flex-direction:column;gap:8px}}@media(max-width:390px){.wrap{width:calc(100% - 36px)}.hero{background-position:64% center;background-size:cover;min-height:750px}.hero-content{padding-top:335px}.navlinks{gap:10px;font-size:8px}.hero h1{font-size:80px}.hero-copy{font-size:17px}}
-
-/* Final mobile/desktop contrast pass */
-#themes.section{
-  background-color:#09110c;
-  background-image:
-    linear-gradient(180deg,rgba(7,15,10,.48),rgba(7,15,10,.40)),
-    url("/images/sad-garden-gate.webp");
-  background-size:cover;
-  background-position:center 54%;
+ .wrap{width:calc(100% - 42px)}nav{height:70px}.brand{font-size:11px}.navlinks{gap:14px;font-size:8px;letter-spacing:.08em}.navlinks a:nth-child(2),.navlinks a:nth-child(3){display:none}.navlinks .nav-buy{padding:10px 12px}
+ .hero{min-height:760px;align-items:flex-end;background-position:62% center}.hero:before{background:linear-gradient(180deg,rgba(5,11,7,.06) 0%,rgba(5,11,7,.18) 28%,rgba(5,11,7,.76) 58%,#0a110d 100%)}
+ .hero-content{padding:330px 0 95px}.eyebrow{font-size:9px;margin-bottom:24px}h1{font-size:clamp(94px,23vw,138px);margin-bottom:30px}h1 span{font-size:16px;letter-spacing:.24em;margin-top:22px}.hero-line{font-size:29px;max-width:520px}.hero-copy{font-size:14px;line-height:1.7}.scroll-note{display:none}
+ .section{padding:82px 0}.intro-grid,.structure-grid{grid-template-columns:1fr;gap:28px}.intro-lead{font-size:27px}.intro-copy{font-size:15px}.gate{min-height:570px;background-position:59% center}.gate:before{background:linear-gradient(180deg,rgba(5,12,8,.25),rgba(5,12,8,.76))}.gate-quote{font-size:42px}.section-head{display:block}.section-head p{margin-top:18px}.theme-grid{grid-template-columns:1fr;margin-top:35px}.theme{min-height:0;padding:25px 23px}.theme-num{margin-bottom:17px}.theme h3{font-size:21px}.structure-intro{position:static}.chapter{font-size:13px;padding:18px 0}.closing{padding:88px 0}.closing p{font-size:19px}.buy{padding:82px 0}.author-inner{align-items:flex-start;flex-direction:column}.author{padding:55px 0}footer .wrap{flex-direction:column;gap:9px}
 }
-#themes.section .themes{background:transparent;gap:0}
-#themes.section .theme{
-  background:rgba(5,13,8,.12);
-  border:0;
-  border-top:1px solid rgba(205,190,145,.34);
-  padding:30px 28px;
-  -webkit-backdrop-filter:none;
-  backdrop-filter:none;
-}
-#themes.section .theme:last-child{border-bottom:1px solid rgba(205,190,145,.34)}
-.book-section{
-  background-color:#09110c;
-  background-image:
-    linear-gradient(90deg,rgba(7,15,10,.48),rgba(7,15,10,.38)),
-    url("/images/sad-garden-gate.webp");
-  background-size:cover;
-  background-position:76% center;
-}
-.book-section .contents{border-top-color:rgba(205,190,145,.34)}
-.book-section .contents>div{border-bottom-color:rgba(205,190,145,.28)}
-@media(max-width:760px){
-  #themes.section{
-    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-garden-gate.webp");
-    background-position:58% center;
-  }
-  #themes.section .theme{padding:24px 22px;background:rgba(5,13,8,.08)}
-  .book-section{
-    background-image:linear-gradient(180deg,rgba(7,15,10,.54),rgba(7,15,10,.42)),url("/images/sad-garden-gate.webp");
-    background-position:68% center;
-  }
-}
-
-/* Frosted navigation strip: readable links over the hero photograph */
-nav{
-  background:rgba(5,12,8,.36);
-  -webkit-backdrop-filter:blur(14px) saturate(125%);
-  backdrop-filter:blur(14px) saturate(125%);
-  border-bottom:1px solid rgba(230,224,205,.14);
-  box-shadow:0 8px 28px rgba(0,0,0,.10);
-}
-@supports not ((backdrop-filter:blur(1px))){
-  nav{background:rgba(5,12,8,.76)}
-}
-
-/* Garden book purchase panel */
-.buy-garden{
-  position:relative;
-  padding:88px 0 96px;
-  overflow:hidden;
-  isolation:isolate;
-  border-top:1px solid rgba(255,255,255,.10);
-  background:
-    radial-gradient(ellipse at 78% 22%,rgba(190,163,103,.22),transparent 32%),
-    radial-gradient(ellipse at 14% 78%,rgba(71,111,68,.30),transparent 42%),
-    linear-gradient(110deg,rgba(5,13,8,.58),rgba(8,18,12,.44)),
-    url("/images/sad-garden-gate.webp") 68% center/cover no-repeat;
-}
-.buy-garden:before{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  inset:-7%;
-  background:
-    radial-gradient(ellipse at 70% 30%,rgba(218,197,139,.18),transparent 24%),
-    radial-gradient(ellipse at 18% 52%,rgba(112,143,91,.20),transparent 30%),
-    radial-gradient(ellipse at 90% 88%,rgba(18,54,31,.42),transparent 34%);
-  filter:blur(26px);
-  pointer-events:none;
-}
-.buy-garden:after{
-  content:"";
-  position:absolute;
-  z-index:-1;
-  inset:0;
-  opacity:.28;
-  background:
-    linear-gradient(125deg,transparent 0 36%,rgba(180,195,145,.10) 36.2%,transparent 37%),
-    linear-gradient(55deg,transparent 0 63%,rgba(180,195,145,.08) 63.2%,transparent 64%);
-  pointer-events:none;
-}
-.buy-garden .buy-panel{
-  max-width:900px;
-  margin:auto;
-  padding:42px;
-  border:1px solid rgba(225,235,222,.26);
-  border-radius:20px;
-  background:rgba(13,25,17,.48);
-  -webkit-backdrop-filter:blur(16px) saturate(125%);
-  backdrop-filter:blur(16px) saturate(125%);
-  box-shadow:0 18px 55px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.10);
-  text-align:center;
-}
-.buy-garden h2{
-  max-width:720px;
-  margin:0 auto 18px;
-  font:500 clamp(36px,5vw,58px)/1.02 Manrope,sans-serif;
-  letter-spacing:-.05em;
-}
-.buy-garden .buy-lead{
-  max-width:590px;
-  margin:0 auto 32px;
-  color:#d0d6cb;
-  font-size:16px;
-  line-height:1.75;
-}
-.garden-buy-options{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-  max-width:720px;
-  margin:0 auto;
-  text-align:left;
-}
-.garden-buy-option{
-  min-height:132px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  padding:23px 24px;
-  border:1px solid rgba(225,235,222,.25);
-  border-radius:13px;
-  background:rgba(7,15,10,.28);
-  transition:background .2s ease,border-color .2s ease,transform .2s ease;
-}
-.garden-buy-option.available:hover{
-  transform:translateY(-3px);
-  background:rgba(20,35,24,.55);
-  border-color:rgba(225,210,170,.58);
-}
-.garden-buy-option strong{font:600 16px Manrope,sans-serif;color:#f2f0e8}
-.garden-buy-option span{font-size:12px;line-height:1.6;color:#bdc5b9}
-.garden-buy-option b{align-self:flex-end;color:var(--gold);font-size:21px;font-weight:400}
-.garden-buy-option.pending{opacity:.72;border-style:dashed}
-.garden-buy-option.pending b{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
-@media(max-width:760px){
- .buy-garden{padding:64px 0 70px;background-position:62% center}
- .buy-garden .buy-panel{padding:29px 19px;border-radius:16px}
- .buy-garden .buy-lead{font-size:15px;margin-bottom:24px}
- .garden-buy-options{grid-template-columns:1fr;gap:10px}
- .garden-buy-option{min-height:112px;padding:19px}
-}
+@media(max-width:390px){.wrap{width:calc(100% - 34px)}.navlinks{gap:9px}.hero{min-height:730px}.hero-content{padding-top:300px}.hero-line{font-size:26px}.gate-quote{font-size:36px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
 </head>
 <body>
-<nav class="wrap"><a class="brand" href="sad.html">С<span>А</span>Д</a><div class="navlinks"><a href="#about">Про книгу</a><a href="#themes">Теми</a><a href="#author">Автор</a><a href="#buy">Купити</a><a href="index.html">Штурвал</a></div></nav>
+<nav class="wrap" aria-label="Головна навігація">
+ <a class="brand" href="author.html">VITALII MIHOVICH</a>
+ <div class="navlinks">
+  <a href="#about">Про книгу</a><a href="#themes">Теми</a><a href="#structure">Зміст</a>
+  <a href="index.html">ШТУРВАЛ ↗</a><a class="nav-buy" href="#buy">Книга ↗</a>
+ </div>
+</nav>
 <header class="hero">
-<div class="forest"></div>
-<div class="portal" aria-hidden="true">
-<svg viewBox="0 0 620 720" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8a8970"/><stop offset=".45" stop-color="#454d3d"/><stop offset="1" stop-color="#202b21"/></linearGradient>
-<linearGradient id="inside" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d8bd79"/><stop offset=".34" stop-color="#64744c"/><stop offset="1" stop-color="#18291d"/></linearGradient>
-<radialGradient id="glow"><stop stop-color="#e6d29b" stop-opacity=".85"/><stop offset="1" stop-color="#d4c080" stop-opacity="0"/></radialGradient>
-<filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
-</defs>
-<ellipse cx="315" cy="365" rx="190" ry="280" fill="url(#glow)" filter="url(#blur)"/>
-<path d="M72 690V300C72 112 177 28 310 28s238 84 238 272v390h-70V303c0-143-68-211-168-211S142 160 142 303v387z" fill="url(#stone)" stroke="#b4a77e" stroke-opacity=".34" stroke-width="3"/>
-<path d="M145 690V304c0-139 65-211 165-211s165 72 165 211v386z" fill="#111c14"/>
-<path d="M175 690V311c0-118 49-179 135-179s135 61 135 179v379z" fill="url(#inside)"/>
-<path d="M178 590C232 520 254 467 310 448c64-22 89 26 135 74v168H178z" fill="#203c26"/>
-<path d="M178 625c54-71 100-93 139-92 56 1 88 42 128 87v70H178z" fill="#152c1d"/>
-<g fill="#344b2d"><circle cx="226" cy="365" r="48"/><circle cx="284" cy="330" r="56"/><circle cx="370" cy="353" r="62"/><circle cx="414" cy="407" r="45"/><circle cx="260" cy="420" r="53"/></g>
-<path d="M310 690c-12-95-3-166 0-219 4-65 2-111 0-164" stroke="#d6bb7e" stroke-opacity=".42" stroke-width="3" fill="none"/>
-<path d="M310 690c-75-57-97-111-111-163M310 690c67-60 93-110 116-166" stroke="#d6bb7e" stroke-opacity=".22" stroke-width="2" fill="none"/>
-<g fill="none" stroke="#243a26" stroke-width="17" stroke-linecap="round"><path d="M67 610C30 530 48 448 91 405s-4-119 39-194 95-99 126-154"/><path d="M548 618c39-73 21-147-20-192s6-126-41-192-95-92-127-151"/></g>
-<g fill="none" stroke="#81906a" stroke-width="5" stroke-linecap="round"><path d="M66 578c42-20 56-47 56-76M78 484c-24-30-20-58-7-78M97 405c37-15 50-44 47-75M550 578c-41-21-53-49-52-78M535 475c24-31 19-59 5-78M514 400c-36-17-49-45-44-77"/></g>
-<g fill="#71845b"><ellipse cx="112" cy="481" rx="25" ry="10" transform="rotate(-35 112 481)"/><ellipse cx="80" cy="421" rx="23" ry="9" transform="rotate(35 80 421)"/><ellipse cx="143" cy="334" rx="23" ry="9" transform="rotate(-28 143 334)"/><ellipse cx="507" cy="483" rx="25" ry="10" transform="rotate(35 507 483)"/><ellipse cx="540" cy="420" rx="23" ry="9" transform="rotate(-35 540 420)"/><ellipse cx="478" cy="333" rx="23" ry="9" transform="rotate(28 478 333)"/></g>
-<path d="M72 690h476" stroke="#c2b58d" stroke-opacity=".35" stroke-width="4"/>
-</svg>
-</div>
-<div class="wrap"><div class="hero-content"><p class="eyebrow">Віталій Мігович · Філософська притча</p><h1>САД<span>КНИГА</span></h1><p class="hero-copy">Перший Сад був даний. Другий треба було створити.</p><p class="hero-note"><b>Про пізнання.</b> Про межі. Про свободу. І про світ, який ми залишимо тим, хто прийде після нас.</p><a class="cta" href="#about">Увійти до Саду</a></div></div>
+ <div class="wrap hero-content">
+  <p class="eyebrow">Віталій Мігович · Філософська притча</p>
+  <h1>САД<span>КНИГА ПРО ЛЮДИНУ І СВІТ</span></h1>
+  <p class="hero-line">Перший Сад був даний.<br>Другий треба було створити.</p>
+  <p class="hero-copy">Історія про те, як людина виходить за межі готового світу, вчиться пізнавати його — і зрештою мусить вирішити, що залишити тим, хто прийде після неї.</p>
+  <div class="actions">
+   <a class="btn btn-primary" href="#about">Увійти до Саду <span>↓</span></a>
+   <a class="btn btn-ghost" href="#structure">35 розділів <span>↗</span></a>
+  </div>
+ </div>
+ <div class="scroll-note">Прокрути, щоб почати</div>
 </header>
 <main>
-<section class="section" id="about"><div class="wrap intro-grid"><div><div class="kicker">Не хроніка. Не підручник.</div><h2>Сад — це спосіб поставити запитання.</h2></div><div><p>Людина прокинулася всередині світу, який вважала всім світом. Вона не бачила, як виник Сад, і не знала, що було за його воротами. А потім межа зникла — і почалося пізнання.</p><p>«САД» — філософська притча. Її персонажі й сцени узагальнені та вигадані. Історичні, наукові й технологічні явища тут стають опорами для роздуму, а не готовими відповідями.</p></div></div></section>
-<section class="section gate-section" id="garden"><div class="wrap gate-grid"><div><div class="kicker">За брамою</div><div class="gate-quote">Можливо, людині дали не готовий Рай.<br><span>Можливо, дали насінину.</span></div></div><div class="gate-text"><p>Вихід із Саду — не лише втрата. Це початок зустрічі з невідомим: вогнем, пам’яттю, мовою, законом, вірою, машинами й іншими людьми.</p><p>Крок за кроком людина вчиться не тільки пояснювати світ, а й відповідати за те, яким він стає. Бо майбутнє починається раніше, ніж з’являється той, кому воно належатиме.</p></div></div></section>
-<section class="section" id="themes"><div class="wrap"><div class="kicker">Коло питань</div><h2>Від першої межі — до спільного майбутнього.</h2><div class="themes"><article class="theme"><b>Пізнання</b><p>Як ми відрізняємо спостереження від пояснення — і коли починаємо плутати одне з іншим.</p></article><article class="theme"><b>Свобода</b><p>Що означає обирати, коли межі дозволеного формують наш світ.</p></article><article class="theme"><b>Відповідальність</b><p>Чому знання, сила й технології потребують внутрішньої межі.</p></article></div></div></section>
-<section class="section book-section"><div class="wrap book-grid"><div class="book-copy"><div class="kicker">Структура книги</div><h2>Тридцять п’ять розділів. Одна довга розмова.</h2><p>Від «Саду» й «Пізнання» — через «Ім’я», «Бога», «Совість», «Мову», «Машину» та «Любов» — до «Повернення» й «Епілогу».</p><p>Книга не закриває питання остаточною відповіддю. Вона залишає простір для наступного питання.</p></div><div class="contents"><div>Початок <span>I–V · САД — СЛІД</span></div><div>Людина і порядок <span>VI–XVII</span></div><div>Світ і його образи <span>XVIII–XXX</span></div><div>Я, ми і любов <span>XXXI–XXXIV</span></div><div>Повернення до питання <span>XXXV · ЕПІЛОГ</span></div></div></div></section>
-
-<section class="buy-garden" id="buy">
-  <div class="wrap">
-    <div class="buy-panel">
-      <div class="kicker">Електронна книга</div>
-      <h2>Зробити крок до Саду.</h2>
-      <p class="buy-lead">Обери зручний спосіб отримати книгу. Посилання на пряме завантаження додамо окремо.</p>
-      <div class="garden-buy-options">
-        <a class="garden-buy-option available" href="https://play.google.com/store/search?q=%D0%A1%D0%90%D0%94%20%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9%20%D0%9C%D1%96%D0%B3%D0%BE%D0%B2%D0%B8%D1%87&c=books" target="_blank" rel="noopener">
-          <strong>Google Play Книги</strong>
-          <span>Знайти електронне видання в Google Play</span>
-          <b>↗</b>
-        </a>
-        <div class="garden-buy-option pending" aria-disabled="true">
-          <strong>Пряме завантаження</strong>
-          <span>Завантаження EPUB або PDF безпосередньо з сайту</span>
-          <b>Посилання додамо</b>
-        </div>
-      </div>
-    </div>
+<section class="section intro" id="about">
+ <div class="wrap intro-grid">
+  <div>
+   <p class="kicker">Про цю книгу</p>
+   <h2>Сад — це спосіб поставити запитання.</h2>
+   <p class="intro-lead">Що ми робимо зі свободою, коли вперше бачимо межу?</p>
   </div>
+  <p class="intro-copy">Людина прокидається всередині Саду й вважає його всім світом. За воротами — невідоме. Коли ворота зачиняються, починається довга історія пізнання: від вогню й перших пояснень до мови, науки, машин і спроб зрозуміти самих себе. <strong>Це не історична хроніка і не підручник, а філософська притча</strong>, у якій образ Саду стає мовою для розмови про межі, відповідальність і майбутнє.</p>
+ </div>
 </section>
-<section class="author" id="author"><div class="wrap author-inner"><div><div class="kicker">Автор</div><h2>Віталій Мігович</h2><p>Пише про людину, її мислення і світ, який вона сама навколо себе формує.</p></div><a class="author-link" href="author.html">Сторінка автора ↗</a></div></section>
+<section class="gate" aria-label="Відкриті ворота до Саду">
+ <div class="wrap">
+  <p class="gate-quote">«Який світ створю я<br>для того, хто <em>прийде після мене?</em>»</p>
+  <p class="gate-caption">Головне питання книги</p>
+ </div>
+</section>
+<section class="section themes" id="themes">
+ <div class="wrap">
+  <div class="section-head">
+   <div><p class="kicker">Територія розмови</p><h2>Від першої межі —<br>до спільного майбутнього.</h2></div>
+   <p>Книга рухається крізь різні теми, але повертається до одного: як людські уявлення змінюють світ і що ми робимо з цією силою</p>
+  </div>
+  <div class="theme-grid">
+   <article class="theme"><div class="theme-num">01 / ПОЧАТОК</div><h3>Пізнання і свобода</h3><p>Вигнання, невідомість, досвід і перші спроби зрозуміти закономірності світу</p></article>
+   <article class="theme"><div class="theme-num">02 / ЛЮДИНА</div><h3>Віра і відповідальність</h3><p>Бог, закон, совість, натовп, сумнів і межі наших пояснень</p></article>
+   <article class="theme"><div class="theme-num">03 / МИСЛЕННЯ</div><h3>Мова і моделі</h3><p>Знаки, код, інформація, образи та різниця між картою і територією</p></article>
+   <article class="theme"><div class="theme-num">04 / МАЙБУТНЄ</div><h3>Машина і людина</h3><p>Технології, знання та питання про те, що ми створюємо разом</p></article>
+   <article class="theme"><div class="theme-num">05 / СТОСУНОК</div><h3>Я, ми і любов</h3><p>Інший як той, кого не можна звести до нуля, і любов як умова наших рішень</p></article>
+   <article class="theme"><div class="theme-num">06 / ПРОДОВЖЕННЯ</div><h3>Повернення</h3><p>Не відновити минуле, а залишити наступним поколінням право перевершити нас</p></article>
+  </div>
+ </div>
+</section>
+<section class="section structure" id="structure">
+ <div class="wrap structure-grid">
+  <div class="structure-intro">
+   <p class="kicker">Архітектура книги</p>
+   <h2>Тридцять п’ять розділів. Одна довга розмова.</h2>
+   <p>Від історії першого Саду — через людські уявлення, інструменти й системи — до питання про те, яким може бути світ після нас</p>
+   <div class="note">Факти й наукові згадки в тексті слід відрізняти від авторських висновків. Книга не пропонує остаточної відповіді — вона запрошує перевіряти власні.</div>
+  </div>
+  <div class="chapters" aria-label="Структура книги">
+   <div class="chapter">Початок <span>I–V · САД — СЛІД</span></div>
+   <div class="chapter">Людина і порядок <span>VI–XVII</span></div>
+   <div class="chapter">Світ і його образи <span>XVIII–XXX</span></div>
+   <div class="chapter">Я, ми і любов <span>XXXI–XXXIV</span></div>
+   <div class="chapter">Повернення до питання <span>XXXV · ЕПІЛОГ</span></div>
+  </div>
+ </div>
+</section>
+<section class="closing">
+ <div class="wrap">
+  <p class="kicker">Останнє запитання</p>
+  <h2>Можливо, готового Раю ніколи не давали.</h2>
+  <p>Дали насінину. І свободу зіпсувати її. Або виростити.</p>
+  <a class="btn btn-primary" href="#buy">Продовжити розмову <span>↓</span></a>
+ </div>
+</section>
+<section class="buy" id="buy">
+ <div class="wrap buy-panel">
+  <p class="kicker">Електронна книга</p>
+  <h2>Зробити крок до Саду.</h2>
+  <p>Перевір доступність електронного видання «САД» у Google Play Книгах.</p>
+  <a class="btn btn-primary" href="https://play.google.com/store/search?q=%D0%A1%D0%90%D0%94%20%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9%20%D0%9C%D1%96%D0%B3%D0%BE%D0%B2%D0%B8%D1%87&c=books" target="_blank" rel="noopener">Знайти книгу в Google Play <span>↗</span></a>
+  <p class="buy-note">Пряме завантаження з цього сайту поки не підключене — не показуємо неактивну кнопку як доступну покупку.</p>
+ </div>
+</section>
+<section class="author" id="author"><div class="wrap author-inner"><div><p class="kicker">Автор</p><h2>Віталій Мігович</h2><p>Пише про людину, її мислення і світ, який вона сама навколо себе формує.</p></div><a class="author-link" href="author.html">Сторінка автора ↗</a></div></section>
 </main>
 <footer><div class="wrap"><span>© Віталій Мігович, 2026 · Усі права захищено.</span><span><a href="index.html">ШТУРВАЛ</a> · <a href="terms.html">Умови</a> · <a href="privacy.html">Конфіденційність</a></span></div></footer>
-</body></html>
+</body>
+</html>
