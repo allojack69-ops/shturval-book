@@ -1,32 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1100" role="img" aria-labelledby="t d">
-<title id="t">Межа Саду</title><desc id="d">Сучасна графічна композиція: геометрична межа, дерево, відчинені ворота та шлях за ними.</desc>
-<rect width="1200" height="1100" fill="#d8d8cf"/>
-<path d="M0 0H1200V1100H0Z" fill="#e7e5dc"/>
-<path d="M0 0H780V1100H0Z" fill="#d3d3c9"/>
-<path d="M120 1100V0M240 1100V0M360 1100V0M480 1100V0M600 1100V0" stroke="#171a17" stroke-opacity=".06"/>
-<path d="M0 180H1200M0 360H1200M0 540H1200M0 720H1200M0 900H1200" stroke="#171a17" stroke-opacity=".06"/>
-<!-- distant unknown -->
-<path d="M720 0H1200V1100H720Z" fill="#3155ef"/>
-<circle cx="970" cy="430" r="255" fill="#f1efe7"/>
-<circle cx="970" cy="430" r="205" fill="none" stroke="#171a17" stroke-width="2" stroke-dasharray="5 12"/>
-<path d="M720 0L950 0L950 1100L720 1100Z" fill="#3155ef"/>
-<!-- boundary wall and open gate -->
-<path d="M0 760H690V1100H0Z" fill="#171a17"/>
-<path d="M110 760V1100M220 760V1100M330 760V1100M440 760V1100M550 760V1100" stroke="#f1efe7" stroke-opacity=".14"/>
-<path d="M0 840H690M0 930H690M0 1020H690" stroke="#f1efe7" stroke-opacity=".14"/>
-<path d="M690 760L830 650V1100H690Z" fill="#ef5b3e"/>
-<path d="M830 650L940 760V1100H830Z" fill="#f1efe7"/>
-<path d="M830 650L940 760" stroke="#171a17" stroke-width="4"/>
-<!-- tree, graphic not pastoral -->
-<path d="M365 760V420" stroke="#171a17" stroke-width="22"/>
-<path d="M365 520L250 390M365 470L490 330M365 610L215 545M365 590L520 490" stroke="#171a17" stroke-width="15" stroke-linecap="square"/>
-<path d="M250 390L190 330M490 330L550 250M215 545L150 520M520 490L585 430" stroke="#ef5b3e" stroke-width="8"/>
-<circle cx="190" cy="330" r="38" fill="#ef5b3e"/><circle cx="550" cy="250" r="48" fill="#ef5b3e"/><circle cx="150" cy="520" r="30" fill="#ef5b3e"/><circle cx="585" cy="430" r="34" fill="#ef5b3e"/>
-<!-- path through the threshold -->
-<path d="M760 1100L830 820L900 760L1020 1100Z" fill="#f1efe7" opacity=".9"/>
-<path d="M840 1100L865 880L900 820L945 1100" fill="none" stroke="#171a17" stroke-width="2"/>
-<!-- small human scale marker -->
-<circle cx="1020" cy="790" r="13" fill="#171a17"/><path d="M1020 806V865M1020 824L995 846M1020 824L1042 844M1020 865L1002 900M1020 865L1038 900" stroke="#171a17" stroke-width="7" stroke-linecap="round"/>
-<path d="M70 90H530" stroke="#171a17" stroke-width="2"/><path d="M70 90V145" stroke="#ef5b3e" stroke-width="8"/>
-<text x="70" y="180" fill="#171a17" font-family="monospace" font-size="19" letter-spacing="5">A WORLD IS A BORDER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1300" role="img" aria-labelledby="title desc">
+<title id="title">Ворота Саду на межі двох світів</title>
+<desc id="desc">Кінематографічний образ давнього кам’яного муру, відчинених воріт, дерева й стежки, що веде з темного саду у широкий незнаний світ.</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#17241b"/><stop offset=".48" stop-color="#68735b"/><stop offset="1" stop-color="#d0b98b"/></linearGradient>
+ <linearGradient id="light" x2="1" y2="1"><stop stop-color="#f0d9a4" stop-opacity=".85"/><stop offset="1" stop-color="#d8b77d" stop-opacity="0"/></linearGradient>
+ <linearGradient id="stone" x2=".9" y2="1"><stop stop-color="#777564"/><stop offset=".45" stop-color="#3b4035"/><stop offset="1" stop-color="#202a22"/></linearGradient>
+ <linearGradient id="path" x2="0" y2="1"><stop stop-color="#b9a27a"/><stop offset="1" stop-color="#403e30"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#f5dba7" stop-opacity=".9"/><stop offset="1" stop-color="#f5dba7" stop-opacity="0"/></radialGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="32"/></filter>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .16 0"/></filter>
+</defs>
+<rect width="1800" height="1300" fill="url(#sky)"/>
+<circle cx="1260" cy="390" r="440" fill="url(#glow)" filter="url(#blur)"/>
+<path d="M0 720Q280 520 530 640T1030 610T1800 540V1300H0Z" fill="#283b2c"/>
+<path d="M0 790Q320 630 620 760T1190 690T1800 650V1300H0Z" fill="#1b2b20"/>
+<!-- distant hills and the world beyond -->
+<path d="M0 680L180 570 310 610 520 470 680 600 850 500 1040 650 1240 470 1440 610 1620 490 1800 570V900H0Z" fill="#4d5b45" opacity=".72"/>
+<path d="M0 760L260 650 440 720 710 610 930 760 1170 620 1400 720 1620 620 1800 690V960H0Z" fill="#394a38"/>
+<path d="M820 1300Q920 1040 1100 850Q1210 730 1370 680Q1260 850 1270 1000Q1290 1130 1460 1300Z" fill="url(#path)"/>
+<path d="M960 1300Q1030 1080 1170 900Q1230 820 1300 780" fill="none" stroke="#e2c99a" stroke-opacity=".34" stroke-width="10"/>
+<!-- old garden tree -->
+<path d="M420 940Q470 760 450 610Q430 470 520 330Q570 250 620 210Q560 360 585 470Q610 580 560 720Q535 830 560 960Z" fill="#292f22"/>
+<path d="M510 610Q380 500 260 430M530 520Q650 420 740 300M490 730Q340 680 220 590M545 700Q680 620 790 520" fill="none" stroke="#303a28" stroke-width="48" stroke-linecap="round"/>
+<path d="M260 430Q180 350 150 300M260 430Q320 300 370 250M740 300Q820 230 900 210M220 590Q140 550 90 500M790 520Q860 450 910 400" fill="none" stroke="#303a28" stroke-width="27" stroke-linecap="round"/>
+<g fill="#263c2a">
+ <ellipse cx="250" cy="330" rx="260" ry="150"/><ellipse cx="520" cy="245" rx="300" ry="185"/><ellipse cx="790" cy="300" rx="240" ry="160"/><ellipse cx="180" cy="520" rx="230" ry="145"/><ellipse cx="690" cy="500" rx="270" ry="150"/>
+</g>
+<g fill="#71805a" opacity=".48"><ellipse cx="330" cy="270" rx="150" ry="80"/><ellipse cx="650" cy="190" rx="170" ry="90"/><ellipse cx="820" cy="380" rx="130" ry="80"/></g>
+<!-- stone boundary and open gate -->
+<path d="M0 780L250 730V1300H0Z" fill="url(#stone)"/>
+<path d="M0 780L250 730L250 820L0 870Z" fill="#8a8571"/>
+<path d="M1450 700L1800 760V1300H1450Z" fill="url(#stone)"/>
+<path d="M1450 700L1800 760V845L1450 790Z" fill="#8a8571"/>
+<g stroke="#a59b7d" stroke-opacity=".22" stroke-width="5">
+ <path d="M0 930L250 885M0 1080L250 1035M0 1200L250 1155M1450 870L1800 930M1450 1030L1800 1090M1450 1170L1800 1230"/>
+ <path d="M95 790V1300M180 770V1300M1550 720V1300M1680 740V1300"/>
+</g>
+<!-- gate arch, old stone -->
+<path d="M690 1300V650Q690 260 1050 240Q1410 260 1410 650V1300H1300V660Q1300 365 1050 350Q800 365 800 660V1300Z" fill="#30382d"/>
+<path d="M800 1300V660Q800 365 1050 350Q1300 365 1300 660V1300" fill="none" stroke="#9a9277" stroke-opacity=".65" stroke-width="22"/>
+<path d="M690 1300V650Q690 260 1050 240Q1410 260 1410 650" fill="none" stroke="#b4a98a" stroke-opacity=".45" stroke-width="12"/>
+<path d="M755 650Q760 335 1050 305Q1340 335 1345 650" fill="none" stroke="#d1c09a" stroke-opacity=".22" stroke-width="3"/>
+<!-- light spilling through threshold -->
+<path d="M810 1300V665Q810 390 1050 375Q1290 390 1290 665V1300Z" fill="url(#light)" opacity=".65"/>
+<path d="M900 1300Q950 1030 1050 880Q1150 1030 1200 1300Z" fill="#d7bc8a" opacity=".22"/>
+<!-- small human silhouette at the threshold -->
+<circle cx="1050" cy="790" r="17" fill="#151d17"/>
+<path d="M1050 808L1040 900L1017 975M1040 900L1070 970M1044 840L1008 890M1044 840L1080 880" fill="none" stroke="#151d17" stroke-width="13" stroke-linecap="round"/>
+<!-- foreground texture -->
+<path d="M0 1120Q360 1030 690 1140T1280 1110T1800 1080V1300H0Z" fill="#111b15" opacity=".62"/>
+<rect width="1800" height="1300" filter="url(#grain)" opacity=".18"/>
+<rect width="1800" height="1300" fill="#09120c" opacity=".16"/>
 </svg>
